@@ -5,7 +5,7 @@ import { Title } from '@angular/platform-browser';
 import { HttpClient, HttpErrorResponse, HttpBackend } from '@angular/common/http';
 import { environment } from '../../../environments/environment';
 import { CommonModule, NgFor, NgIf } from '@angular/common';
-import { RouterModule } from '@angular/router';
+import { RouterLink, RouterModule } from '@angular/router';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { KeysPipe } from '../../pipes/keys.pipe';
 import { LoadingComponent } from '../../shared/loading/loading.component';
@@ -15,7 +15,7 @@ import { LoadingComponent } from '../../shared/loading/loading.component';
   templateUrl: './blogpost-list.component.html',
   imports: [
     CommonModule, RouterModule, NgFor, NgxPaginationModule, 
-    KeysPipe, LoadingComponent, NgIf
+    KeysPipe, LoadingComponent, NgIf, RouterLink
   ],
   styleUrls: ['./blogpost-list.component.css']
 })
@@ -27,7 +27,6 @@ export class BlogpostListComponent implements OnInit {
 
   isLoading: boolean = false;
 
-  private http: HttpClient;
 
   ServerUrl = environment.baseUrl;
 
@@ -37,11 +36,7 @@ export class BlogpostListComponent implements OnInit {
 
 
   constructor(
-    private titleService: Title,
-    private blogService: BlogService,
-
-    handler: HttpBackend) {
-    this.http = new HttpClient(handler);
+    private blogService: BlogService) {
    }
 
   ngOnInit() {

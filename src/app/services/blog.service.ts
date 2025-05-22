@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Blog } from '../models/blog';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { throwError } from 'rxjs';
-import { catchError } from 'rxjs/operators';
+import { catchError, map } from 'rxjs/operators';
 import { environment } from '../../environments/environment';
 import { Category } from '../models/category';
 
@@ -11,6 +11,7 @@ import { Category } from '../models/category';
 })
 export class BlogService {
 
+  blog!:Blog;
   serverUrl = environment.baseUrl;
 
   constructor(private http: HttpClient) { }
@@ -20,6 +21,34 @@ export class BlogService {
       catchError(this.handleError)
     );
   }
+
+
+  getBlog(id: number) {
+    return this.http.get<Blog>(this.serverUrl + 'blog/show/' + id)
+    .pipe(
+      catchError(this.handleError)
+    );
+  }
+   getBlogSlug(slug: string) {
+          const url = `${this.serverUrl}blog/slug/${slug}`;
+          return this.http.get<any>(url)
+            .pipe(
+              map((resp:{ok: boolean, blogs: Blog[]}) => resp.blogs[0])
+              );
+        }
+  getBlogwithCat(id: number) {
+    return this.http.get<Blog>(this.serverUrl + 'blog/showcategory/' + id)
+    .pipe(
+      catchError(this.handleError)
+    );
+  }
+  // getBlogSlug(slug: string) {
+  //   return this.http.get<Blog>(this.serverUrl + 'blog/slug/' + slug)
+  //   .pipe(
+  //     catchError(this.handleError)
+  //   );
+  // }
+
 
   getactivosBlogs() {
     return this.http.get<Blog>(this.serverUrl + 'blog/activos').pipe(
@@ -39,24 +68,7 @@ export class BlogService {
     );
   }
 
-  getBlog(id: number) {
-    return this.http.get<Blog>(this.serverUrl + 'blog/show/' + id)
-    .pipe(
-      catchError(this.handleError)
-    );
-  }
-  getBlogwithCat(id: number) {
-    return this.http.get<Blog>(this.serverUrl + 'blog/showcategory/' + id)
-    .pipe(
-      catchError(this.handleError)
-    );
-  }
-  getBlogSlug(slug: string) {
-    return this.http.get<Blog>(this.serverUrl + 'blog/slug/' + slug)
-    .pipe(
-      catchError(this.handleError)
-    );
-  }
+  
 
 
   

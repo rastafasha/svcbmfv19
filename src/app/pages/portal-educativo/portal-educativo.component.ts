@@ -21,10 +21,10 @@ export class PortalEducativoComponent implements OnInit {
    }
 
    ngOnInit() {
-    this.miembroService.getMiembros().subscribe(
-      (res:any) => this.miembros = res.data,
-      error => this.error = error
-    );
+    // this.miembroService.getMiembros().subscribe(
+    //   (res:any) => this.miembros = res.data,
+    //   error => this.error = error
+    // );
   }
 
 }

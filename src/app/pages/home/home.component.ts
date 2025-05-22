@@ -15,7 +15,7 @@ import { BanverticalComponent } from '../../shared/banner/banvertical/banvertica
   selector: 'app-home',
   templateUrl: './home.component.html',
   imports: [
-    CommonModule, HttpClientModule, SliderComponent, BanershomeComponent,
+    CommonModule, HttpClientModule, SliderComponent,
     BlogHomeComponent, BancuadradoComponent,
     BanhorizontalComponent,BanverticalComponent
   ],

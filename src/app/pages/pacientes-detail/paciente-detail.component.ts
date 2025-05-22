@@ -22,28 +22,39 @@ import { BancuadradoComponent } from '../../shared/banner/bancuadrado/bancuadrad
 })
 export class PacienteDetailComponent implements OnInit {
 
-  paciente$!: Observable<Paciente>;
+  // paciente!: Observable<Paciente>;
+  paciente!: Paciente;
 
   constructor(
-    private route: ActivatedRoute,
+    private activatedRoute: ActivatedRoute,
     private router: Router,
     private pacienteService: PacienteService,
     private titleService: Title
   ) { }
 
   ngOnInit() {
-    this.paciente$ = this.route.paramMap.pipe(
-      switchMap((params: ParamMap) => {
-        const idParam = params.get('id');
-        if (idParam === null) {
-          throw new Error('ID parameter is missing');
-        }
-        return this.pacienteService.getPaciente(+idParam);
-      })
-    );
+    this.activatedRoute.params.subscribe(({id}) => {
+        this.getProfile(id);
+      });
+    // this.paciente$ = this.route.paramMap.pipe(
+    //   switchMap((params: ParamMap) => {
+    //     const idParam = params.get('id');
+    //     if (idParam === null) {
+    //       throw new Error('ID parameter is missing');
+    //     }
+    //     return this.pacienteService.getPaciente(+idParam);
+    //   })
+    // );
     window.scrollTo(0,0);
 
     //this.titleService.setTitle('SVCBMF - Blog Detail');
   }
+
+  getProfile(id:number) {
+      this.pacienteService.getPaciente(id).subscribe((res:any)=>{
+        this.paciente = res;
+        console.log(res);
+      })
+    }
 
 }

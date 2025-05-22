@@ -28,9 +28,8 @@ import { BanverticalComponent } from '../../shared/banner/banvertical/banvertica
 })
 export class BlogpostDetailComponent implements OnInit {
 
-
-
-  blog!: Observable<Blog>;
+  // blog!: Observable<Blog>;
+  blog!: Blog;
   
   slug:any;
   // public Editor = DecoupledEditor;
@@ -45,18 +44,26 @@ export class BlogpostDetailComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    const slug = this.activatedRoute.snapshot.paramMap.get('slug');
 
-    this.slug = slug;
-    this.blogService.getBlogSlug(this.slug).subscribe(
-      (res:any) => {
-        this.blog = res[0];
-        console.log(this.blog);
-      }
-    );
-    window.scrollTo(0, 0);
+    this.activatedRoute.params.subscribe(({slug}) => {
+        this.getBlog(slug);
+      });
 
+    // this.blog = this.activatedRoute.paramMap.pipe(
+    //   switchMap(params => {
+    //     this.slug = params.get('slug');
+    //     window.scrollTo(0, 0);
+    //     return this.blogService.getBlogSlug(this.slug!);
+    //   })
+    // );
   }
+
+  getBlog(slug:any) {
+      this.blogService.getBlogSlug(this.slug!).subscribe((res:any)=>{
+        this.blog = res;
+        console.log(res);
+      })
+    }
 
   // public onReady( editor ) {
   //   editor.ui.getEditableElement().parentElement.insertBefore(

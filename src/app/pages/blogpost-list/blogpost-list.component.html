@@ -23,7 +23,8 @@
                         <div class="row">
                             <div class="col-xs-12 col-sm-5 imgnott nopadd" [ngStyle]="{'background-image': 'url(' + blog.image + ')'}"></div>
                             <div class="col-xs-12 col-sm-7" style="margin-top: 10px;">
-                                <a [routerLink]="['/blog/', blog.slug]">
+                                <a [routerLink]="['/blog', blog.slug]">
+                                <!-- <a href="blog/{{blog.slug}}" target="_self" rel="noopener noreferrer"> -->
                                     <h5>{{blog.title}}</h5>
                                 </a>
                                 <p>{{blog.short_desc}}</p>

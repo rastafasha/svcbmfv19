@@ -29,8 +29,9 @@ export const routes: Routes = [
   {path: 'trauma-como-problema-de-salud-publica', component: TraumaComponent},
   {path: 'servicios-de-cirugia-en-el-sistema-publico-de-salud', component: ServiciosComponent},
 
-  {path: 'blog', component: BlogpostListComponent},
+  {path: 'blogs', component: BlogpostListComponent},
   {path: 'blog/:slug', component: BlogpostDetailComponent},
+  // {path: 'blog/:id', component: BlogpostDetailComponent},
 
   {path: 'revista', component: RevistaComponent},
   {path: 'contacto', component: ContactFormComponent},
