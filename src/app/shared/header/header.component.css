@@ -1,0 +1,51 @@
+.topdesk,
+.logodesk {
+    display: block;
+}
+
+.topmovil {
+    display: none;
+}
+
+.iconologomenu {
+    display: none;
+}
+
+@media(max-width:768px) {
+    .topdesk,
+    .logodesk {
+        display: none;
+    }
+    .topmovil {
+        display: block;
+    }
+    .iconologomenu {
+        display: flex;
+    }
+    .iconologomenu img {
+        display: flex;
+        width: 35%;
+    }
+}
+
+.nav-menu a {
+    font-family: 'HelveticaNeueLTPro-Md';
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #191c79;
+}
+
+.botondestacado {
+    border: 1px solid var(--morado);
+    border-radius: 4px;
+    background-color: #191c79;
+    color: #fff;
+}
+
+@media(max-width:768px) {
+    .botondestacado {
+        border: 1px solid transparent;
+        color: #fff;
+        background-color: transparent;
+    }
+}

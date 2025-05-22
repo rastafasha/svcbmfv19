@@ -1,0 +1,29 @@
+<div class="card-body">
+    <app-slider-portal></app-slider-portal>
+    <div class="profiletimeline ">
+        <div class="sl-item">
+            <div class="sl-left"> <img src="assets/img/logo.png" alt="user" class="img-circle"> </div>
+            <div class="sl-right" *ngFor="let timeline of timelines ">
+                <div><a href="#" class="link">SVCBMF</a> <span class="sl-date"> 5 minutes ago</span>
+                    <p>{{timeline.title}}</p>
+                    <p>{{timeline.short_desc}}</p>
+                    <div class="row">
+                        <img src="{{timeline.image}}" class="img-responsive radius">
+                    </div>
+                    <div class="row">
+                        <iframe src="https://www.youtube.com/embed/{{timeline.youtube}}" width="100%" height="280" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" allowFullScreen="true"></iframe>
+                    </div>
+                    <div class="row">
+                        <iframe src="{{timeline.facebook}}" width="100%" height="280" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" allowFullScreen="true"></iframe>
+                    </div>
+                    <div class="like-comm mt-1">
+                        <a href="javascript:void(0)" class="link m-r-10"><i class="fa fa-heart text-danger"></i> 5 </a>
+                        <a href="javascript:void(0)" class="link m-r-10"> <i class="fa fa-share text-success"></i> Compartir</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+    </div>
+</div>

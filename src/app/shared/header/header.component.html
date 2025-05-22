@@ -1,0 +1,106 @@
+<!--==========================
+    Header
+  ============================-->
+<header id="header">
+    <!--==========================
+    Top Bar
+  ============================-->
+    <section id="topbar" class=" topdesk ">
+        <div class="container clearfix">
+            <div class="contact-info float-left">
+                <i class="fa fa-envelope-o"></i> <a routerLink="/contacto">Contáctenos</a>
+                <!-- <i class="fa fa-phone"></i> <a href="telf:+582129456090" target="_blank" rel="noopener noreferrer">+58 (212) 945-60.90</a> -->
+            </div>
+            <div class="social-links float-right">
+                <a href="https://www.facebook.com/groups/svcbmf/" target="_blank" class="facebook"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.instagram.com/svcbmf/" target="_blank" class="instagram"><i class="fa fa-instagram"></i></a>
+                <a href="https://twitter.com/SVCBMFOficial" target="_blank" class="twitter"><i class="fa fa-twitter"></i></a>
+
+            </div>
+            <div class="social-links float-right">
+                <a routerLink="/miembros"> <i class="fa fa-user"></i> Area de Miembros</a>
+                <a routerLink="/portal-educativo"> <i class="fa fa-graduation-cap"></i> Portal Educativo</a>
+                <!--a routerLink="/portal-educativo" data-toggle="modal" data-target="#loginModal"><i class="fa fa-graduation-cap"></i> Portal Educativo</a-->
+                <a routerLink="/directorio" class="boton-top"> <i class="fa fa-book"></i> Directorio Profesional</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="topbar" class="topmovil ">
+        <div class="container clearfix">
+            <div class="float-left">
+                <div id="logo" class="pull-left" style="width: 23%;">
+                    <a routerLink='/home'>
+                        <img src="./assets/img/logotipo.png" alt="logo" title="Sociedad Venezolana de Cirugia Buco-maxilofacial" />
+                    </a>
+                </div>
+            </div>
+            <div class="social-links float-right">
+                <a routerLink="/miembros"> <i class="fa fa-user"></i></a>
+                <a routerLink="/portal-educativo"><i class="fa fa-graduation-cap"></i></a>
+                <a routerLink="/directorio" class="boton-top"> <i class="fa fa-book"></i></a>
+            </div>
+        </div>
+    </section>
+    <div class="container pt-3">
+        <div id="logo" class="pull-left logodesk" style="width: 20%;">
+            <a routerLink='/home'>
+                <img src="./assets/img/logotipo.png" alt="logo" title="Sociedad Venezolana de Cirugia Buco-maxilofacial" />
+            </a>
+        </div>
+        <nav id="nav-menu-container">
+            <div class="iconologomenu">
+                <img src="./assets/img/logo.png" alt="logo" title="Sociedad Venezolana de Cirugia Buco-maxilofacial" />
+            </div>
+            <ul class="nav-menu">
+                <li><a routerLink='/home' routerLinkActive="active">Home</a></li>
+                <!-- <li class="menu-has-children"><a>Congreso</a>
+                    <ul>
+                        <li><a routerLink='/XXIX-congreso-cenezolano-cirugia-bucomaxilofacial' routerLinkActive="active">XXIX Congreso Venezolano Cirugía Bucomaxilofacial</a></li>
+                        <li><a routerLink='/curso-pre-congreso-1' routerLinkActive="active">Curso Pre-Congreso 1</a></li>
+                        <li><a routerLink='/curso-pre-congreso-2' routerLinkActive="active">Curso Pre-Congreso 2</a></li>
+                        <li><a routerLink='/curso-congreso' routerLinkActive="active">Curso Congreso 1</a></li>
+                        <li><a routerLink='/pago-anualidad' routerLinkActive="active">Pago Anualidad</a></li>
+                        <li><a href='https://svcbmf.net/server/media/pdf/Programa-XXIX-Congreso-Venezolano-de-Cirugia-Bucomaxilofacial-2022.pdf' target="_blank">Programa XXIX Congreso </a></li>
+                    </ul>
+                </li> -->
+
+                <li class="menu-has-children"><a>Area Profesional</a>
+                    <ul>
+                        <li><a routerLink='/documentos' routerLinkActive="active">Documentos</a></li>
+                        <li><a routerLink='/solvencias' routerLinkActive="active">Solvencias</a></li>
+                    </ul>
+                </li>
+                <li class="menu-has-children"><a>Area Pacientes</a>
+                    <ul>
+                        <li><a routerLink='/que-es-cirugia-bucal-y-buco-maxilofacial' routerLinkActive="active">Qué es la Cirgía Bucal y Buco-Maxilofacial?</a></li>
+                        <li><a routerLink='/como-podemos-ayudarte' routerLinkActive="active">Cómo podemos ayudarte?</a></li>
+                        <li><a routerLink='/tips' routerLinkActive="active">Tips para los pacientes y la comunidad</a></li>
+                        <li><a routerLink='/servicios-de-cirugia-en-el-sistema-publico-de-salud' routerLinkActive="active">Servicios de Cirugía en el Sistema Público de Salud</a></li>
+                        <li><a routerLink='/trauma-como-problema-de-salud-publica' routerLinkActive="active">El trauma como problema de salud pública</a></li>
+                    </ul>
+                </li>
+                <li class="menu-has-children"><a>Nosotros</a>
+
+                    <ul>
+                        <li><a routerLink='/nosotros' routerLinkActive="active">Breve descripción</a></li>
+                        <li><a routerLink='/resena-historica' routerLinkActive="active">Reseña histórica</a></li>
+                        <li><a routerLink='/junta-directiva-nacional' routerLinkActive="active">Junta directiva nacional</a></li>
+                        <li><a routerLink='/junta-directiva-regional' routerLinkActive="active">Junta directiva regional</a></li>
+                        <li><a routerLink='/acta-constitutiva' routerLinkActive="active">Acta constitutiva</a></li>
+                        <!--li><a routerLink='/estatutosSVCBMF' routerLinkActive="active">Estatutos SVCBMF</a></li-->
+                    </ul>
+                </li>
+
+                <!--li><a href="https://congresobucomaxilofacial.com" target="_blank" class="botondestacado">Congreso</a></li-->
+                <!-- <li><a routerLink="/congreso" routerLinkActive="active">Congreso</a></li> -->
+                <li><a routerLink='/blog' routerLinkActive="active">Blog</a></li>
+                <li><a routerLink="/revista" routerLinkActive="active">Revista</a></li>
+                <!--li><a routerLink="/contacto" routerLinkActive="active">Contacto</a></li-->
+            </ul>
+        </nav>
+        <!-- #nav-menu-container -->
+    </div>
+</header>
+<!-- #header -->
+<div class="clear"></div>

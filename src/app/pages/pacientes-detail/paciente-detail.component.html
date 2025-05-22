@@ -1,0 +1,37 @@
+<section class="blog-detail mt-4">
+    <div class="container">
+        <div class="row">
+
+            <div class="directorio col-xs-12 col-sm-4 col-md-7 col-lg-8 mb-5">
+                <div class="blog-left" *ngIf="paciente$ | async as paciente else loading">
+                    <h1>{{paciente.title}}</h1>
+                    <div class="detail-img">
+                        <img src="{{paciente.image}}" alt="{{paciente.seo_title}}" />
+                    </div>
+                    <div class="clear"></div> <br>
+                    <!--share-buttons [theme]="'modern-dark'" [include]="['facebook','twitter','linkedin','pinterest','telegram','whatsapp','line','sms','email']" [show]="2" [size]="-3" [autoSetMeta]="false"></share-buttons-->
+                    <!--div class="paciente-desc" [innerHTML]="paciente.description"></div-->
+
+                    <div class="paciente-desc" [(innerHtml)]="paciente.description"></div>
+
+
+                </div>
+                <ng-template #loading>
+                    <div class="service-error">
+                        <h3>Error loading of the blog detail. Please try again later.</h3>
+                    </div>
+                </ng-template>
+            </div>
+
+            <!---lateral ads--->
+            <div class="desktop  col-sm-4 col-md-4 col-lg-4">
+                <app-paciente-recent></app-paciente-recent>
+                <app-banvertical></app-banvertical>
+            </div>
+            <div class="col-xs-12 mb-5 movil">
+                <app-paciente-recent></app-paciente-recent>
+                <app-bancuadrado></app-bancuadrado>
+            </div>
+        </div>
+    </div>
+</section>

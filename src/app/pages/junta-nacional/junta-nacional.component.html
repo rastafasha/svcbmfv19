@@ -1,0 +1,44 @@
+<section class="topes" id="directorio">
+    <div class="container">
+        <h1 class="up">Junta directiva</h1>
+    </div>
+</section>
+
+<app-loading *ngIf="isLoading" ></app-loading>  
+<div *ngIf="!isLoading">
+    <div *ngFor="let fotoceo of fotoceos; let i = index"  >
+    <section class="quebaria uppp" [ngStyle]="{'background-image': 'url(' + fotoceo.image + ')'}">
+        <div class="container">
+            <div class="col-xs-12 col-sm-6 col-sm-push-6">
+                <h1>{{fotoceo.titulo}}</h1>
+                <p>{{fotoceo.periodo}}</p>
+            </div>
+        </div>
+    </section>
+</div>
+</div>
+
+<div class="clear"></div>
+<app-loading *ngIf="isLoading" ></app-loading> 
+<section class="main" *ngIf="!isLoading">
+    <div class="container">
+        <div class="uppp" style="margin-bottom:30px">
+            <div class="row">
+                <div class="col-6 col-sm-4" *ngFor="let ceo of ceos">
+
+                    <div *ngIf="!ceo.image">
+                        <div class="circle" style="background-image: url(./assets/img/logo.png)"></div>
+                    </div>
+                    <div *ngIf="ceo.image">
+                        <div class="circle" [ngStyle]="{'background-image': 'url(' + ceo.image + ')'}"></div>
+                    </div>
+
+                    <div class="infoDir">
+                        <h5>{{ceo.name}}</h5>
+                        <h6>{{ceo.cargoceo_name}}</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

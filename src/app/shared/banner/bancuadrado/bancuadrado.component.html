@@ -1,0 +1,21 @@
+<div class="bannerC">
+    <owl-carousel-o [options]="banC" class=" card ">
+        <ng-template carouselSlide class="item" *ngFor="let bancuadrado of bancuadrados; let i = index">
+            <a href="{{bancuadrado.enlace}}" target="{{bancuadrado.target}}">
+                <img [src]="bancuadrado.image" alt="{{bancuadrado.titulo}}">
+            </a>
+        </ng-template>
+    </owl-carousel-o>
+</div>
+
+
+
+
+
+<!--div class="bancc">
+    div *ngFor=" let bancuadrado of bancuadrados | slice:0:1 ">
+        <a href="{{bancuadrado.enlace}}" target="{{bancuadrado.target}}">
+            <img src="{{bancuadrado.image}}" alt="{{bancuadrado.titulo}}" style="display: block !important;">
+        </a>
+    </div>
+</div-->

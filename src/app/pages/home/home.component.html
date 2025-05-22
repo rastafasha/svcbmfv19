@@ -1,0 +1,118 @@
+<app-slider></app-slider>
+
+<!-- <section class="noshom sli " id="sli3">
+    <app-noticias-home></app-noticias-home>
+</section> -->
+
+<!-- <app-banershome></app-banershome> -->
+
+<div class="clear"></div>
+
+<section id="sli3" class="admin-emp skewed-bg " style="background-image: url(./assets/img/business-care-chair-clinic-532786.jpg)">
+    <div class="container content">
+        <div class="row">
+            <div class="col-6 col-sm-3 ">
+                <div class="bordAex iconText">
+                    <a routerLink='/documentos'><i class="fa fa-gavel"></i></a>
+                    <h3>Documentos</h3>
+                </div>
+            </div>
+            <div class="col-6 col-sm-3 ">
+                <div class="bordAex iconText">
+                    <a routerLink='/revista'><i class="fa fa-file-text"></i></a>
+                    <h3>Revista Científica</h3>
+                </div>
+            </div>
+            <div class="col-6 col-sm-3 ">
+                <div class="bordAex iconText">
+                    <a routerLink='/tips'><i class="fa fa-medkit"></i></a>
+                    <h3>Area Pacientes</h3>
+                </div>
+            </div>
+            <div class="col-6 col-sm-3 ">
+                <div class="bordAex iconText">
+                    <a routerLink='/directorio'><i class="fa fa-user-md"></i></a>
+                    <h3>Directorio</h3>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div> <br><br><br>
+        <!---ADS horizontal rectangular--->
+        <app-banhorizontal></app-banhorizontal>
+
+
+
+    </div>
+</section>
+
+
+<div class="clear"></div>
+
+<section class="">
+    <div class="container">
+        <h1 style="text-align: right;">Blog</h1>
+    </div>
+</section>
+
+<div class="clear"></div>
+
+<section class="main ">
+    <div class="container">
+        <div class="row">
+            <!--Directorio home-->
+            <div class="directorio col-xs-12 col-sm-4 col-md-7 col-lg-8">
+                <app-blog-home></app-blog-home>
+            </div>
+
+            <!---lateral ads--->
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <app-bancuadrado></app-bancuadrado>
+                <br>
+                <br>
+                <app-banvertical></app-banvertical>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<div class="clear"></div>
+
+<!---ADS horizontal rectangular--->
+<div class="clear"></div>
+
+<section class=" main ">
+    <div class="ads">
+        <a href="revista">
+            <video autoplay="" loop="" fullscreen="false" data-wow-delay="0.5s" id="video-background">
+                <source src="assets/img/banner.mp4" type="video/mp4">Your browser does not support the video tag. I suggest you upgrade your browser.
+             </video>
+        </a>
+    </div>
+</section>
+
+<div class="clear"></div>
+
+<!---Aliados--->
+
+<section class="">
+    <div class="container">
+        <div class="centradobord">
+            <h1>Aliados</h1>
+        </div>
+    </div>
+</section>
+
+<section class="main ">
+    <div class="container">
+        <div class="galleryAliados">
+            <div *ngFor="let aliado of aliados ">
+                <div class="aliado">
+                    <a href="{{aliado.enlace}}" target="{{aliado.target}}">
+                        <img src="{{aliado.image}}" alt="Sociedad venezolana de cirugia bucomaxilofacial {{aliado.title}} ">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

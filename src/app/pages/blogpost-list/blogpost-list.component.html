@@ -1,0 +1,39 @@
+<div class="clear"></div>
+<section class="topes" id="directorio">
+    <div class="container">
+        <h1 class="up">{{title}}</h1>
+    </div>
+</section>
+
+<app-loading *ngIf="isLoading" ></app-loading>
+<section class="blog-list" *ngIf="!isLoading">
+    <div class="container">
+        <div class="clear"></div>
+        <!--Including the pagination control.-->
+        <div class="row mt-4 mb-4">
+            <div class="text-center">
+                <pagination-controls (pageChange)="onPageChange($event)"  previousLabel="Anterior" nextLabel="Siguiente"></pagination-controls>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6  fr-view" style="margin-bottom: 20px;" *ngFor="let blog of blogs | keys | paginate: { itemsPerPage: count, currentPage: p }">
+                <!--div class="col-sm-6 col-md-4 fr-view" *ngFor=" let directorio of directorios"-->
+                <div class=" card cardblog">
+                    <div class="card-body ">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-5 imgnott nopadd" [ngStyle]="{'background-image': 'url(' + blog.image + ')'}"></div>
+                            <div class="col-xs-12 col-sm-7" style="margin-top: 10px;">
+                                <a [routerLink]="['/blog/', blog.slug]">
+                                    <h5>{{blog.title}}</h5>
+                                </a>
+                                <p>{{blog.short_desc}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>

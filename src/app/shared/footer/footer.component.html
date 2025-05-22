@@ -1,0 +1,54 @@
+<div class="clear"></div><br><br>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-4">
+                <a routerLink="/">
+                    <div class="logo col-xs-12  col-md-10"></div>
+                </a>
+            </div>
+
+            <div class="col-xs-12 col-sm-4 dirfooter"  *ngFor="let configuracion of configuracions">
+                <p><b>Direccción:</b></p>
+                <div [innerHtml]="configuracion.direccion" class="dirf"></div>
+                <div class="{{configuracion.telefonoActivo}}">
+                    <p><b>Teléfonos:</b></p>
+                    <a href="tel:{{configuracion.telefono}}" class="tel" target="_blank">{{configuracion.telefono}}</a>
+
+                </div>
+                <div class="{{configuracion.telPresActivo}}">
+                    <p><b>Presidencia:</b></p>
+                    <a href="tel:{{configuracion.telPresidencia}}" class="tel" target="_blank">{{configuracion.telPresidencia}}</a>
+
+                </div>
+                <div class="{{configuracion.telSecActivo}}">
+                    <p><b>Secretaría:</b></p>
+                    <a href="tel:{{configuracion.telSecretaria}}" class="tel" target="_blank">{{configuracion.telSecretaria}}</a>
+
+                </div>
+                <div class="configuracion.telTesActivo">
+                    <p><b>Tesorería:</b></p>
+                    <a href="tel:{{configuracion.telTesoreria}}" class="tel" target="_blank">{{configuracion.telTesoreria}}</a>
+
+                </div>
+                <br><br>
+            </div>
+            <div class="social col-xs-12 col-sm-4 d-flex ">
+                <ul>
+                    <li><a routerLink="/contacto"><i class="fa fa-envelope"></i></a></li>
+                    <li><a href="https://www.facebook.com/groups/svcbmf/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="https://www.instagram.com/svcbmf/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="https://twitter.com/SVCBMFOficial" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+<div class="credits">
+    <div class="container">
+        <p>Sociedad Venezolana de Cirugía Bucomaxilofacial [ SVCBMF ] 2019 - {{ year }} <br> Diseño y Desarrollo por: <a href="https://www.malcolmcordova.com" target="_blank">Malcolm Córdova</a></p>
+    </div>
+</div>

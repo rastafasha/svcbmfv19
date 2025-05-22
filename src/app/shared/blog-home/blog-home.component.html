@@ -1,0 +1,42 @@
+<app-loading *ngIf="isLoading" ></app-loading>
+
+<div class="row" *ngIf="!isLoading">
+    <div class=" col-12 col-sm-12 col-md-6  fr-view" style="margin-bottom: 20px;" *ngFor="let blog of blogs | slice:0:4 ">
+        <div class=" card cardblog">
+            <div class="card-body ">
+                <div class="row">
+
+                    <div *ngIf="blog.video ">
+                        <div class="col-12 col-sm-12 col-md-12 imgnott nopadd">
+                            <div class="embed-responsive embed-responsive-16by9 z-depth-1-half  ">
+                                <iframe class="embed-responsive-item " [src]="getVideoIframe(blog.video)" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-12" style="padding-top: 10px;">
+                            <a [routerLink]="['/blog', blog.id]">
+                                <h5>{{blog.title}}</h5>
+                            </a>
+                            <p>{{blog.description|slice:0:30}}...</p>
+                        </div>
+                    </div>
+
+                    <div *ngIf="!blog.video ">
+                        <a [routerLink]="['/blog', blog.id]">
+                            <div class="col-12 col-sm-12 col-md-12 imgnott nopadd" [ngStyle]="{'background-image': 'url(' + blog.image + ')'}"></div>
+                        </a>
+                        <div class="col-12 col-sm-12 col-md-12" style="padding-top: 10px;">
+                            <a [routerLink]="['/blog', blog.id]">
+                                <h5>{{blog.title}}</h5>
+                            </a>
+                            <p>{{blog.description|slice:0:30}}...</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <a [routerLink]="['/blog']"><button class="boton2 btn">+ Info</button></a>
+</div>
+

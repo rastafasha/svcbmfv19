@@ -1,0 +1,48 @@
+<section class="topes" id="directorio">
+    <div class="container">
+        <h1 class="up">Servicios de Cirugía en el Sistema Público de Salud.</h1>
+    </div>
+</section>
+<div class="container">
+    <div class="row">
+        <div class="col-12 pt-5 pb-5">
+            <h3>Programas de Formación en Cirugia Bucal - Cirugia Buco Maxilofacial</h3>
+        </div>
+    </div>
+
+</div>
+<app-loading *ngIf="isLoading" ></app-loading>
+<div class="container" *ngIf="!isLoading">
+    <!--Including the pagination control.-->
+    <!-- <div class="row mt-4 mb-4">
+        <div class="text-center">
+            <pagination-controls (pageChange)="p = $event"  previousLabel="Anterior" nextLabel="Siguiente"></pagination-controls>
+        </div>
+    </div> -->
+    <p>Total: {{total}}</p>
+    <div class="row">
+        <div class="col-12 col-sm-6 col-md-4 fr-view mb-5" *ngFor="let formacion of formacions | keys | paginate: { itemsPerPage: count, currentPage: p }">
+            <div class="card">
+                <div class="card-body">
+
+                    <h6>{{formacion.title}}</h6>
+                    <br>
+                    <p><b>Tipo de Programa:</b> {{formacion.tipoPrograma}}</p>
+                    <p><b>Aval:</b> {{formacion.aval}}</p>
+                    <p><b>Tiempo de Formación:</b> {{formacion.tiempoFormacion}}</p>
+                    <p><b>Frecuencia:</b> {{formacion.frecuencia}}</p>
+                    <p><b>Director:</b> {{formacion.director}}</p>
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <!--Including the pagination control.-->
+    <div class="row mt-4 mb-4">
+        <div class="text-center">
+            <pagination-controls (pageChange)="p = $event"  previousLabel="Anterior" nextLabel="Siguiente"></pagination-controls>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+.displayBlok {
+    display: block;
+}
+
+.displayNone {
+    display: none;
+}
+
+.dirfooter{
+    column-count: 2;
+    column-width: auto;
+    column-fill: balance;
+}
+
+.dirf{
+    padding-bottom: 60px;
+}
+
+@media screen and (max-width: 768px) {
+    .dirfooter{
+        column-count: 1;
+        column-width: auto;
+        column-fill: balance;
+    }
+
+    .dirf{
+        padding-bottom: 0px;
+    }
+    
+}

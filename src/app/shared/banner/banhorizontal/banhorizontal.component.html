@@ -1,0 +1,9 @@
+<div class="bannerH">
+    <owl-carousel-o [options]="banH" class=" card ">
+        <ng-template carouselSlide class="item" *ngFor="let banhorizontal of banhorizontals; let i = index">
+            <a href="{{banhorizontal.enlace}}" target="{{banhorizontal.target}}">
+                <img [src]="banhorizontal.image" alt="{{banhorizontal.titulo}}">
+            </a>
+        </ng-template>
+    </owl-carousel-o>
+</div>

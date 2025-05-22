@@ -1,0 +1,46 @@
+<section class="topes" id="blog">
+    <div class="container">
+        <h1 class="uppp">{{title}}</h1>
+    </div>
+</section>
+
+
+<app-loading *ngIf="isLoading" ></app-loading>
+<section *ngIf="!isLoading">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-9">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6" *ngFor="let dir of regionales">
+                        <div class="card cardblog" style="margin-bottom:20px">
+                            <div class="card-body">
+
+                                <h5>{{dir.title}}.</h5>
+                                <p><b>Presidente:</b> {{dir.presidente}}</p>
+                                <p><b>Secretario:</b> {{dir.secretario}}</p>
+                                <div *ngIf="dir.tesorero">
+                                    <p><b>Tesorero:</b> {{dir.tesorero}}</p>
+                                </div>
+                                <div *ngIf="dir.vocal">
+                                    <p><b>Vocal:</b> {{dir.vocal}}</p>
+                                </div>
+                                <div *ngIf="dir.primerSuplente">
+                                    <p><b>1er. Suplente:</b> {{dir.primerSuplente}}</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!---lateral ads--->
+            <div class="col-xs-12 col-sm-3">
+                <app-bancuadrado></app-bancuadrado>
+                <app-banvertical></app-banvertical>
+            </div>
+
+        </div>
+    </div>
+</section>
