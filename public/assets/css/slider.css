@@ -1,0 +1,193 @@
+@charset "UTF-8";
+
+/* CSS Document */
+
+
+/*Author: Malcolm cordova @malcolmcordova mercadocreativo@gmail.com www.malcolmcordova.com*/
+
+.cuadrotext {
+    background-color: #fff;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.cuadrotext h1 {
+    font-family: 'HelveticaNeueLTPro-Th';
+    text-transform: uppercase;
+    font-size: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.cuadrotext ul {
+    display: block;
+    padding-left: 50px;
+    padding-bottom: 30px;
+}
+
+.cuadrotext ul li {
+    font-family: 'HelveticaNeueLTPro-Th';
+    font-size: 16px;
+    color: #333;
+}
+
+.cuadrotext p {
+    color: #333;
+}
+
+.botonSlide {
+    padding: 10px 20px;
+    background-color: #49bf81;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+}
+
+.carousel2 {
+    height: auto;
+}
+
+.slider2 {
+    margin-top: 0px;
+    height: 320px;
+    background-color: #fff;
+    padding-top:
+}
+
+.slider2 p {
+    font-family: 'HelveticaNeueLTStd-Lt';
+    color: #333;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.slider2 .item img {
+    width: 99%;
+    height: auto;
+    display: block;
+    margin: 40px auto;
+}
+
+.slider2 .carousel-caption {
+    position: relative;
+    right: 25%;
+    bottom: 20px;
+    left: 25%;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+}
+
+.carousel-control.left {
+    background: none !important;
+    width: 8%;
+}
+
+.carousel-control.right {
+    background: none !important;
+    width: 8%;
+}
+
+.slide2 .carousel-control .fa-chevron-circle-right,
+.slide2 .carousel-control .icon-next {
+    margin-right: 5px;
+    margin-top: 160%;
+    color: #774477;
+    font-size: 40px;
+}
+
+.slide2 .carousel-control .fa-chevron-circle-left,
+.slide2 .carousel-control .icon-prev {
+    margin-left: 5px;
+    margin-top: 160%;
+    color: #774477;
+    font-size: 40px;
+}
+
+@media only screen and (max-width: 600px) {
+    .slider2 {
+        height: auto;
+    }
+    .slide2 .carousel-control .fa-chevron-circle-right,
+    .slide2 .carousel-control .icon-next {
+        margin-right: 5px;
+        margin-top: 910%;
+        color: #774477;
+        font-size: 40px;
+    }
+    .slide2 .carousel-control .fa-chevron-circle-left,
+    .slide2 .carousel-control .icon-prev {
+        margin-left: 5px;
+        margin-top: 910%;
+        color: #774477;
+        font-size: 40px;
+    }
+}
+
+
+/*.slide2 .carousel-indicators li { color: #90182e; border-color: #ccc;}
+
+.slide2 .carousel-indicators .active{ background-color: #90182e; }
+
+
+.slide2 .carousel-indicators li {color: #90182e;}
+
+.slide2 .carousel-indicators  {
+    bottom: -40px !important;
+    border-color: #ccc !important;
+}
+
+.slide2 ol li {border-color: #ccc;}
+
+.slide2 .carousel-indicators .active{ background-color: #90182e;}
+
+/*.carousel-fade .carousel-inner  .item {
+            transition-property: opacity;
+        }
+
+.carousel-fade .item,
+        .active.left,
+        .active.right {
+            opacity: 0.5;
+        }
+
+.carousel-fade .active,
+        .next.left,
+        .prev.right {
+            opacity: 1;
+        }
+
+.carousel-fade .next,
+        .prev,
+        .active.left,
+        .active.right {
+            left: 0;
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+    .carousel-control {
+        z-index: 2;
+    }
+}*/
+
+@media(max-width:768px) {
+    .movil {
+        display: block;
+    }
+    .desktop {
+        display: none;
+    }
+}
+
+@media(min-width:769px) {
+    .movil {
+        display: none;
+    }
+    .desktop {
+        display: block;
+    }
+}

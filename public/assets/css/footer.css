@@ -1,0 +1,122 @@
+@charset "UTF-8";
+
+/* CSS Document */
+
+
+/*Author: Malcolm cordova @malcolmcordova mercadocreativo@gmail.com www.malcolmcordova.com*/
+
+
+/*----foooter--*/
+
+footer {
+    border-top: 1px solid #774477;
+    min-height: 100px;
+    height: auto;
+    padding-top: 20px;
+    background-color: #fafafa;
+}
+
+footer .boton {
+    margin-top: 10px;
+}
+
+footer .logo {
+    height: 70px;
+    margin-top: -10px;
+}
+
+footer ul {
+    display: block;
+    font-size: 14px;
+}
+
+footer ul li {
+    list-style: none;
+    font-family: 'HelveticaNeueLTStd-Lt';
+    transition: all .2s;
+}
+
+footer ul li:hover {
+    list-style: circle
+}
+
+footer ul li a {
+    color: #666;
+    transition: all .2s;
+}
+
+footer ul li a:hover {
+    color: #774477;
+    text-decoration: none;
+    list-style: circle
+}
+
+footer h5 {
+    padding: 0;
+    margin: 0;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+footer .social {
+    float: left;
+    margin-bottom: 20px;
+}
+
+footer .social i {
+    border-radius: 100px;
+    background-color: #774477;
+    width: 40px;
+    height: 40px;
+    font-size: 19px;
+    text-align: center;
+    padding-left: 0;
+    padding-top: 11px;
+    color: #fff;
+}
+
+footer .social ul li {
+    list-style: none;
+}
+
+footer .logo {
+    background-image: url(../img/logotipo.png);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.credits {
+    min-height: 40px;
+    height: auto;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #fafafa;
+}
+
+.credits p {
+    color: #666666;
+    font-family: 'HelveticaNeueLTStd-Lt';
+    font-size: 12px;
+}
+
+.credits a {
+    font-family: 'HelveticaNeueLTStd-Lt';
+    color: #666666;
+    text-decoration: none;
+}
+
+.credits a:hover {
+    color: #666666;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 590px) {
+    footer .logo {
+        height: 70px;
+        margin-bottom: 20px;
+    }
+}

@@ -1,0 +1,345 @@
+@charset "UTF-8";
+
+/* CSS Document */
+
+
+/*Author: Malcolm cordova @malcolmcordova mercadocreativo@gmail.com www.malcolmcordova.com*/
+
+.BannPpal {
+    position: relative;
+    z-index: 2;
+}
+
+.BannPpal {
+    z-index: 1;
+    position: relative;
+    height: calc(100vh);
+    min-height: 80%;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.BannPpal::after {
+    content: '';
+    width: 100%;
+    height: initial;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    position: absolute;
+    height: inherit;
+    left: 0px;
+    top: 0px;
+}
+
+.BannPpal1 {
+    background-image: url(../img/slider/homecongreso.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.BannPpal2 {
+    background-image: url(../img/banner/consultorio.jpg);
+    background-position: center bottom;
+}
+
+.BannPpal3 {
+    background-image: url(../img/banner/consultorio.jpg);
+    background-position: center bottom;
+}
+
+.BannPpal4 {
+    background-image: url(../img/banner/Seven-Mile-Beach-Negril-Jamaica-JANBEACH0118.jpg);
+    background-position: center bottom;
+}
+
+.BannPpal video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 1;
+}
+
+.textos {
+    position: absolute;
+    z-index: 99999;
+    top: 30%;
+    left: 15%;
+    text-shadow: none;
+    width: 70%;
+}
+
+.textos h1 {
+    font-family: 'HelveticaNeueLTStd-Roman';
+    font-size: 55px;
+    text-align: left;
+    color: #fff;
+    overflow: hidden;
+}
+
+.textos h3 {
+    font-family: 'HelveticaNeueLTStd-Roman';
+    font-size: 40px;
+    text-align: left;
+    color: #fff;
+    overflow: hidden;
+}
+
+.textos p {
+    font-family: 'HelveticaNeueLTStd-Lt';
+    font-size: 16px;
+    text-align: left;
+    position: relative;
+    color: #fff;
+}
+
+.textos .boton2 {
+    border-color: #fff;
+    color: #fff;
+}
+
+.textos .small {
+    font-family: 'HelveticaNeueLTStd-Lt';
+    font-size: 14px;
+    text-align: left !important;
+    color: #fff;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.textos .small::before {
+    content: "";
+    height: 1px;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    top: -10px;
+}
+
+@media (max-width: 480px) {
+    .textos {
+        position: absolute;
+        z-index: 99999;
+        top: 38%;
+        left: 15%;
+        text-shadow: none;
+        width: 70%;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: flex-end;
+    }
+    .textos h1 {
+        font-family: 'HelveticaNeueLTStd-Roman';
+        font-size: 24px;
+        text-align: left;
+        color: #fff;
+        overflow: hidden;
+    }
+    .textos h3 {
+        font-family: 'HelveticaNeueLTStd-Roman';
+        font-size: 20px;
+        text-align: left;
+        color: #fff;
+        overflow: hidden;
+    }
+    .textos p {
+        font-family: 'HelveticaNeueLTStd-Lt';
+        font-size: 14px;
+        text-align: left;
+        position: relative;
+        color: #fff;
+    }
+    .BannPpal {
+        z-index: 1;
+        position: relative;
+        height: 600px;
+    }
+    .BannPpal1,
+    .BannPpal2,
+    .BannPpal3 {
+        background-position: center top;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .BannPpal1 {
+        background-image: url('../img/slider/homecongreso-movil.jpg');
+    }
+    .textos .btn {
+        position: absolute;
+        z-index: 99999;
+        top: 398%;
+        left: calc(18%);
+        text-shadow: none;
+        width: auto;
+    }
+}
+
+@media(min-width:769px) {
+    .textos .btn {
+        width: 40%;
+        display: block;
+        margin: 0 auto;
+        margin-top: 140px;
+    }
+}
+
+html,
+body {
+    height: 80%;
+}
+
+.carousel,
+.item,
+.active {
+    height: 100%;
+}
+
+.carrhome {
+    height: 100%;
+}
+
+.carousel-inner {
+    height: 100%;
+}
+
+@media (max-width :768px) {
+    .carousel {
+        height: 90%;
+    }
+}
+
+
+/* Background images are set within the HTML using inline CSS, not here */
+
+.fill {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.slide1 .slide .carousel-indicators li {
+    color: #234090;
+}
+
+.slide1 .slide .carousel-indicators {
+    bottom: -40px !important;
+    border-color: #234090 !important;
+}
+
+.slide1 .slide ol li {
+    border-color: deepskyblue;
+}
+
+.slide1 .slide .carousel-indicators .active {
+    background-color: #234090;
+}
+
+.carousel-fade .carousel-inner .item {
+    transition-property: opacity;
+}
+
+.carousel-fade .item,
+.active.left,
+.active.right {
+    opacity: 0.5;
+}
+
+.carousel-fade .active,
+.next.left,
+.prev.right {
+    opacity: 1;
+}
+
+.carousel-fade .next,
+.prev,
+.active.left,
+.active.right {
+    left: 0;
+    transform: translate3d(0, 0, 0);
+}
+
+.carousel-control {
+    z-index: 2;
+}
+
+@media (max-width: 768px) {
+    .texto {
+        top: 200px;
+    }
+    .texto h1 {
+        font-size: 35px;
+        width: 100%;
+        height: 150px;
+        margin-left: 15px;
+    }
+    .texto .logo,
+    .texto .corpo,
+    .texto .hands {
+        width: 90%;
+        height: 241px;
+        background-position: center top;
+        margin-top: -50px;
+    }
+    .texto p {
+        left: 20px;
+        top: -60px;
+        padding: 20px;
+    }
+    .BannPpal1,
+    .BannPpal2,
+    .BannPpal3 {
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .BannPpal {
+        height: 100%;
+    }
+    .fill {
+        width: 100%;
+        height: auto;
+        background-position: center;
+        -webkit-background-size: contain;
+        -moz-background-size: contain;
+        background-size: contain;
+        -o-background-size: contain;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 990px) {
+    .texto {
+        top: 200px;
+    }
+    .texto h1 {
+        font-size: 80px;
+        width: 100%;
+        height: 150px;
+        margin-left: 15px;
+    }
+    .texto .logo,
+    .texto .corpo,
+    .texto .hands {
+        width: 90%;
+        height: 241px;
+        background-position: center top;
+        margin-top: 0px;
+    }
+    .texto p {
+        left: 100px;
+        top: -20px;
+        padding: 20px;
+    }
+}
+
+.slider .picsum-img-wrapper img {
+    height: auto;
+}

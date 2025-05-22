@@ -1,0 +1,189 @@
+@charset "UTF-8";
+
+/* CSS Document */
+
+
+/*Author: Malcolm cordova @malcolmcordova mercadocreativo@gmail.com www.malcolmcordova.com*/
+
+
+/*----topes---*/
+
+.topes {
+    z-index: 1;
+    position: relative;
+    height: 150px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.topes::after {
+    content: '';
+    width: 100%;
+    height: initial;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    position: absolute;
+    height: inherit;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+}
+
+.topes h1 {
+    font-family: 'HelveticaNeueLTStd-Lt';
+    padding-top: 50px;
+    z-index: 20;
+    position: relative;
+    color: #fff;
+    margin: 0;
+    text-shadow: 1px 1px 1px #000;
+}
+
+.topes2 {
+    z-index: 1;
+    position: relative;
+    height: 100vh;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.topes2::after {
+    content: '';
+    width: 100%;
+    height: initial;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    position: absolute;
+    height: inherit;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+}
+
+.topes2 h1 {
+    font-family: 'HelveticaNeueLTStd-Lt';
+    z-index: 20;
+    position: relative;
+    padding-top: 300px;
+    color: #fff;
+    margin: 0;
+    text-shadow: 1px 1px 1px #000;
+    font-size: 30px;
+    padding-bottom: 15px;
+}
+
+.topes2 h3 {
+    font-family: 'HelveticaNeueLTStd-Lt';
+    z-index: 20;
+    position: relative;
+    color: #fff;
+    margin: 0;
+    text-shadow: 1px 1px 1px #000;
+    font-size: 22px;
+}
+
+#directorio {
+    background-image: url(../img/topes/120602-N-GL340-160_CRP-16-9.jpg);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover
+}
+
+#noticias {
+    background-image: url(../img/topes/disruptive-tech-1600x600-c-default.jpg);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover
+}
+
+#afiliaciones {
+    background-image: url(../img/topes/historial.jpg);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover
+}
+
+#contacto {
+    background-image: url(../img/topes/medical.jpg);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover
+}
+
+#blog {
+    background-image: url(../img/topes/doctor.jpg);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover
+}
+
+#libreria {
+    background-image: url(../img/topes/books-bookstore-book-reading-159711.jpeg);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover
+}
+
+#gracias {
+    background-image: url(../img/topes/imgcontac.jpg);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover
+}
+
+#nos {
+    background-image: url(../img/topes/disruptive-tech-1600x600-c-default.jpg);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover
+}
+
+.call-to-action {
+    background: center bottom/cover no-repeat fixed;
+}
+
+.call-to-action2 {
+    background: center center/cover no-repeat fixed;
+}
+
+@media only screen and (max-width: 768px) {
+    .topes h1 {
+        font-size: 30px;
+        padding-top: 50px;
+    }
+    .call-to-action {
+        background: center bottom/cover no-repeat scroll;
+    }
+    .topes2 {
+        height: 900px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 990px) {
+    .topes h1 {
+        font-size: 60px;
+        padding-top: 80px;
+    }
+}
+
+.topescongreso {
+    height: 350px;
+    background-image: url('../img/slider/homecongreso.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.topescongreso .btn {
+    color: #fff;
+    border-color: #fff;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 990px) {
+    .topes {
+        z-index: 1;
+        position: relative;
+        height: 270px;
+        margin-bottom: 20px;
+        position: relative;
+    }
+}

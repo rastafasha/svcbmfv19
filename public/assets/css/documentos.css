@@ -1,0 +1,116 @@
+@charset "UTF-8";
+/* CSS Document */
+/*Author: Malcolm cordova @malcolmcordova mercadocreativo@gmail.com www.malcolmcordova.com*/
+
+
+
+.caja img{
+    width: 50px;
+    height: 50px;
+    float: left;
+    display: block;
+    margin: auto;
+    margin-right: 10px;
+    
+}
+
+.caja a, .caja a:hover{
+    text-decoration: none;
+}
+
+/*---main--*/
+
+
+.canciones__titulo{
+    border-bottom: 1px solid;
+    opacity: .5;
+    padding-top: 1em;
+    text-transform: uppercase;
+}
+
+.cancion{
+    border-bottom: 1px solid rgba(0,0,0,0.5);
+    padding: .5em .5em;
+    position: relative;
+    background-color: rgba(0,0,0,0);
+    transition: all .3s;
+}
+
+
+
+.cancion:hover{
+    border-bottom: 1px solid rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.1)
+}
+
+.cancion__titulo {
+    margin: 0;
+    font-size: 20px;
+    padding-top: 15px;
+    padding-bottom: 21px;
+}
+
+.cancion__artista{
+    margin: 0;
+    font-size: 16px;
+}
+
+.cancion__opciones {
+    height: 90%;
+    position: absolute;
+    width: 3em;
+    top: 0px;
+    right: 0;
+    padding-top: .8em;
+}
+
+.cancion__opciones i{
+    font-size: 25px;
+    margin-bottom: 5px;
+    color: #774477;
+    float: left;
+}
+
+.toggle-vertical{
+    display: block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #fff;
+    position: relative;
+    margin: auto;
+}
+
+
+.toggle-vertical::before, .toggle-vertical::after{
+    content: "";
+    display: block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    position: absolute;
+    background: #fff;
+}
+.toggle-vertical::before{
+    top: .5em;
+}
+.toggle-vertical::after{
+    top: 1em;
+}
+
+
+@media(max-width:768px){
+      .caja {
+    width: 100%;
+    display: block;
+}
+    
+     .caja h3{font-size: 16px;
+    
+}
+   
+    
+
+}
+
+

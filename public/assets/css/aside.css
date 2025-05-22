@@ -1,0 +1,141 @@
+@charset "UTF-8";
+/* CSS Document */
+/*Author: Malcolm C¨®rdova @malcolmcordova mercadocreativo@gmail.com www.malcolmcordova.com*/
+
+aside{
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    padding: 10px;
+    margin-top: 40px;
+    
+}
+
+aside .notic{
+    position: relative;
+}
+
+aside .notic h3{
+    color: #fff;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    z-index: 999;
+    margin-top: 10px;
+}
+
+aside .notic p {
+    color: #fff;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    height: 30px;
+    position: relative;
+    z-index: 999;
+    overflow: hidden;
+}
+
+aside .notic a{
+    color: #fff;
+    position: relative;
+    z-index: 999;
+    
+}
+
+aside .notic img {
+    width: 100%;
+    height: 50px;
+    display: block;
+    margin-bottom: 20px;
+}
+
+aside .notic{
+    background-color: rgba(0,0,0,0);
+    color: #fff;
+    position: relative;
+    padding-top: 0px;
+}
+
+aside .notic::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    left: 0;
+    background-color: #222;
+    position: absolute;
+    bottom: 88px;
+    transition: all .3s;
+}
+
+
+aside .imgbackgr {
+    background-size: cover;
+    height: 150px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-bottom: 1px solid #fff;
+    padding-top: 30px;
+}
+
+aside .imgbackgr::after {
+   content: '';
+    width: 100%;
+    height: initial;
+    background: rgba(0,0,0,0.5);
+    z-index: 10;
+    position: absolute;
+    height: inherit;
+    left: 0px;
+    top: 0px;
+}
+
+
+
+aside .centradobord h1 {
+    font-weight: 300 !important;
+    font-size: 18px;
+    color: #222;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    line-height: 2;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+aside .centradobord h1{
+    border-bottom: 1px solid #333;
+}
+
+aside .centradobord h1::before,
+aside .centradobord h1::after{
+    content: "";
+    flex: auto;
+    height: .05em;
+    background: red;
+    display: block;
+}
+
+aside .centradobord h1::before{
+    margin-right: .5em;
+    background: #000;
+}
+
+
+aside .centradobord h1::after{
+    margin-left: .5em;
+    background: #000;
+}
+
+
+
+
+
+
+
+

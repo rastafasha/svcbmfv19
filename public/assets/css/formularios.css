@@ -1,0 +1,217 @@
+@charset "UTF-8";
+
+/* CSS Document */
+
+
+/*Author: Malcolm cordova @malcolmcordova mercadocreativo@gmail.com www.malcolmcordova.com*/
+
+.itemobligatorio {
+    color: red;
+}
+
+
+/*****Contacto y Pedidos****/
+
+.ContactoContainer {
+    float: left;
+    text-align: left;
+    color: rgba(102, 102, 102, 1);
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+.ContactoContainer .camp {
+    width: 50%;
+    float: left;
+    margin-bottom: 15px;
+}
+
+.ContactoContainer .camp2 {
+    width: 100%;
+    float: left;
+    margin-bottom: 15px;
+}
+
+.ContactoContainer textarea {
+    width: 100%;
+    height: 100px;
+    margin-top: 10px;
+}
+
+@media only screen and (max-width: 478px) {
+    .ContactoContainer .camp {
+        width: 100%;
+        float: left;
+        margin-bottom: 15px;
+    }
+}
+
+.ContactoContainer .cuadroInput {
+    width: 100%;
+    border: #c3c3c3 solid 1px;
+    height: 40px;
+    font-size: 14px;
+    text-indent: 8px;
+}
+
+.ContactoContainer .cuadroInputComment {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 10px;
+    border: #c3c3c3 solid 1px;
+    font-size: 14px;
+    padding-top: 10px;
+    text-indent: 8px;
+}
+
+.cuadroInput {
+    width: 100%;
+    margin-bottom: 10px;
+    border: #c3c3c3 solid 1px;
+    height: 40px;
+    font-size: 14px;
+    text-indent: 3px;
+}
+
+.cuadroInputComment {
+    width: 100%;
+    height: 100px;
+    border: #c3c3c3 solid 1px;
+    font-size: 14px;
+}
+
+#direcc {
+    width: 100%;
+    float: left;
+    text-align: left;
+    padding: 15px;
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: rgba(102, 102, 102, 1);
+    border-left: 1px solid #ccc;
+}
+
+#direcc a {
+    color: #57483c;
+}
+
+.info {
+    min-height: 100px;
+    height: auto;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.info_social {
+    min-height: 100px;
+    height: auto;
+    border-bottom: 1px solid #ccc;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.info_social .icon i {
+    font-size: 24px;
+    color: #57483c;
+    text-align: center;
+    margin: 5px;
+}
+
+.info_social h3 {
+    text-indent: 20px;
+}
+
+.info_social p {
+    font-size: 14px;
+    padding-top: 20px;
+}
+
+#direcc .icon {
+    height: 90px;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    float: left;
+    margin: 10px;
+    background: transparent;
+}
+
+#direcc .icon i {
+    font-size: 30px;
+    color: #57483c;
+    text-align: center;
+    line-height: 50px;
+    text-indent: 10px;
+}
+
+.Social {
+    height: auto;
+    position: relative;
+    float: left;
+}
+
+@media only screen and (max-width: 478px) {
+    .Social {
+        margin-left: -10%;
+        width: 100%;
+    }
+    #direcc {
+        border-left: none;
+    }
+    #direcc .icon i {
+        font-size: 30px;
+        color: var(--morado);
+        text-align: center;
+        line-height: 50px;
+        text-indent: 10px;
+    }
+}
+
+.conctact {
+    padding-top: 40px;
+    padding-bottom:
+}
+
+
+/*---calculador--*/
+
+.cuadroCalc {
+    border: 1px solid #774477;
+    height: 40px;
+    float: left;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+.botonCalc {
+    background-color: #774477;
+    padding: 10px;
+    height: 40px;
+    color: #fff;
+    text-align: center;
+    float: left;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.botonTest {
+    background-color: #fff;
+    padding: 10px;
+    height: 40px;
+    color: #774477;
+    border: 1px solid #774477;
+    text-align: center;
+    float: left;
+    margin-top: 15px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}

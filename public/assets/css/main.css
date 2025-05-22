@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+/* CSS Document */
+
+
+/*Author: Malcolm cordova @malcolmcordova mercadocreativo@gmail.com www.malcolmcordova.com*/
+
+@import url("animate.css");
+@import url("aside.css");
+@import url("banner.css");
+@import url("banners-ads.css");
+@import url("botones.css");
+@import url("cards.css");
+@import url("carousel.css");
+@import url("documentos.css");
+@import url("fonts.css");
+@import url("footer.css");
+@import url("formularios.css");
+@import url("mouseicon.css");
+@import url("noticias.css");
+@import url("slider.css");
+@import url("svcbmstyle.css");
+@import url("topes.css");
+@import url("Galeria.css");
+@import url("Galeria.css");
+@import url("aliados.css");
+.paciente-desc img {
+    margin: 20px 0px;
+}
