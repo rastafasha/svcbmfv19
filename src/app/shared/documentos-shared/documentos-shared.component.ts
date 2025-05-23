@@ -5,12 +5,13 @@ import { environment } from '../../../environments/environment';
 import { HttpClient,  } from '@angular/common/http';
 import { CommonModule, NgFor, NgIf, } from '@angular/common';
 import { LoadingComponent } from '../loading/loading.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @Component({
   selector: 'app-documentos-shared',
   templateUrl: './documentos-shared.component.html',
   imports: [
-    CommonModule, NgFor, NgIf, LoadingComponent
+    CommonModule, NgFor, NgIf, LoadingComponent, NgxPaginationModule,
   ],
   styleUrls: ['./documentos-shared.component.css']
 })

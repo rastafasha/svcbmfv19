@@ -13,7 +13,8 @@ import { LoadingComponent } from '../loading/loading.component';
   selector: 'app-galleria',
   templateUrl: './galleria.component.html',
   imports: [
-    CommonModule, RouterModule, NgFor, NgxPaginationModule,NgFor,LoadingComponent
+    CommonModule, RouterModule, NgFor, NgxPaginationModule,NgFor,
+    LoadingComponent, KeysPipe
   ],
   styleUrls: ['./galleria.component.css']
 })

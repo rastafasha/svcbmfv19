@@ -9,14 +9,14 @@
     <div class="container">
         <div class="clear"></div>
         <!--Including the pagination control.-->
-        <!-- <div class="row mt-4 mb-4">
+        <div class="row mt-4 mb-4" >
             <div class="text-center">
                 <pagination-controls (pageChange)="p = $event"  previousLabel="Anterior" nextLabel="Siguiente"></pagination-controls>
             </div>
-        </div> -->
+        </div>
         <p>Total: {{total}}</p>
         <div class="row">
-            <div class="col-sm-6  fr-view" style="margin-bottom: 20px;" *ngFor="let paciente of pacientes | keys | paginate: { itemsPerPage: count, currentPage: p }">
+            <div class="col-sm-6  fr-view" style="margin-bottom: 20px;" *ngFor="let paciente of pacientes | keys | paginate: { itemsPerPage: 10, currentPage: p }; let i=index">
                 <!--div class="col-sm-6 col-md-4 fr-view" *ngFor=" let directorio of directorios"-->
                 <div class=" card cardblog">
                     <div class="card-body ">
