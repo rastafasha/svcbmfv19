@@ -7,7 +7,7 @@ export class Slider {
     boton!: string;
     enlace!: string;
     target!: string;
-    image!: string;
+    avatar!: string;
     imagemovil!: string;
     is_active!:boolean;
 }

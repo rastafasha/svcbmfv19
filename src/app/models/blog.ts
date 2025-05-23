@@ -5,7 +5,7 @@ export class Blog {
     seo_title!: string;
     user_id!: number;
     description!: string;
-    image!: string;
+    avatar!: string;
     video!: string;
     slug!: string;
     is_featured!: boolean;

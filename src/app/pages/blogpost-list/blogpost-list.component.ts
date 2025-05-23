@@ -42,7 +42,7 @@ export class BlogpostListComponent implements OnInit {
   ngOnInit() {
     //this.titleService.setTitle(this.title);
     this.isLoading = true;
-    this.blogService.getBlogs().subscribe(
+    this.blogService.getactivosBlogs().subscribe(
       (res:any) => {
         this.blogs = res.blogs.data
         this.total = res.total;

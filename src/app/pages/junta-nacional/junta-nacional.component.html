@@ -7,7 +7,7 @@
 <app-loading *ngIf="isLoading" ></app-loading>  
 <div *ngIf="!isLoading">
     <div *ngFor="let fotoceo of fotoceos; let i = index"  >
-    <section class="quebaria uppp" [ngStyle]="{'background-image': 'url(' + fotoceo.image + ')'}">
+    <section class="quebaria uppp" [ngStyle]="{'background-image': 'url(' + fotoceo.avatar + ')'}">
         <div class="container">
             <div class="col-xs-12 col-sm-6 col-sm-push-6">
                 <h1>{{fotoceo.titulo}}</h1>
@@ -26,11 +26,11 @@
             <div class="row">
                 <div class="col-6 col-sm-4" *ngFor="let ceo of ceos">
 
-                    <div *ngIf="!ceo.image">
+                    <div *ngIf="!ceo.avatar">
                         <div class="circle" style="background-image: url(./assets/img/logo.png)"></div>
                     </div>
-                    <div *ngIf="ceo.image">
-                        <div class="circle" [ngStyle]="{'background-image': 'url(' + ceo.image + ')'}"></div>
+                    <div *ngIf="ceo.avatar">
+                        <div class="circle" [ngStyle]="{'background-image': 'url(' + ceo.avatar + ')'}"></div>
                     </div>
 
                     <div class="infoDir">

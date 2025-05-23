@@ -1,7 +1,7 @@
 export class Bancuadrado {
     id!: number;
     enlace!: string;
-    image!: string;
+    avatar!: string;
     titulo!: string;
     target!: string;
 }

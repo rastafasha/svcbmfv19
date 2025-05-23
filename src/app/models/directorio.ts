@@ -22,7 +22,7 @@ export class Directorio {
     instagram!: string;
     twitter!: string;
     linkedin!: string;
-    image!:string;
+    avatar!:string;
     vcard!:string;
 }
 

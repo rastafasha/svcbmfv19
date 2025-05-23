@@ -4,7 +4,7 @@ export class Aliado {
     enlace!: string;
     user_id!: number;
     target!: string;
-    image!: string;
+    avatar!: string;
     is_featured!: boolean;
     is_active!: boolean;
     created_at!: Date;

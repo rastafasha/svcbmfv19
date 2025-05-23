@@ -2,7 +2,7 @@
     <owl-carousel-o [options]="banV" class=" card ">
         <ng-template carouselSlide class="item" *ngFor="let banvertical of banverticals; let i = index">
             <a href="{{banvertical.enlace}}" target="{{banvertical.target}}">
-                <img [src]="banvertical.image" alt="{{banvertical.titulo}}">
+                <img [src]="banvertical.avatar" alt="{{banvertical.titulo}}">
             </a>
         </ng-template>
     </owl-carousel-o>

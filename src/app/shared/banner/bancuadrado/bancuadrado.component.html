@@ -2,7 +2,7 @@
     <owl-carousel-o [options]="banC" class=" card ">
         <ng-template carouselSlide class="item" *ngFor="let bancuadrado of bancuadrados; let i = index">
             <a href="{{bancuadrado.enlace}}" target="{{bancuadrado.target}}">
-                <img [src]="bancuadrado.image" alt="{{bancuadrado.titulo}}">
+                <img [src]="bancuadrado.avatar" alt="{{bancuadrado.titulo}}">
             </a>
         </ng-template>
     </owl-carousel-o>

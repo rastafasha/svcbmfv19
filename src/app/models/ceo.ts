@@ -4,7 +4,7 @@ export class Ceo {
   cargo_id!: number;
   name!: string;
   cargoceo_name!: string;
-  image!: string;
+  avatar!: string;
   created_at!: Date;
   update_at!: Date;
 }

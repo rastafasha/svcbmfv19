@@ -63,7 +63,7 @@ export class BancuadradoComponent implements OnInit {
 
   ngOnInit() {
 
-    this.bancuadradoService.getBancuadrados().subscribe(
+    this.bancuadradoService.getBancuadradosActivos().subscribe(
       (res:any) => this.bancuadrados = res.bancuadrados.data,
       error => this.error = error
     );

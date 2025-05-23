@@ -19,7 +19,8 @@
             <div class="row">
                 <div class="col-12 col-sm-6 col-md-8">
                     <form (ngSubmit)="onSubmit()" #contactForm="ngForm">
-                        <div class="form-group camp col-sm-6">
+                         <div class="">
+                            <div class="form-group camp col-xs-12 col-sm-6">
                             <input type="text" name="name" id="name" [(ngModel)]="model.name" class="form-control" placeholder=" Nombre y Apellido" required #name="ngModel">
                             <div *ngIf="name.invalid && (name.dirty || name.touched)" class="error">
                                 <div *ngIf="name?.errors?.['required']">
@@ -27,9 +28,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="form-group camp col-sm-6">
+                        <div class="form-group camp col-xs-12 col-sm-6">
                             <input type="text" name="phone" id="phone" [(ngModel)]="model.phone" class="form-control" placeholder=" Telefono">
                         </div>
+                         </div>
                         <div class="form-group camp col-12">
                             <input type="text" name="email" id="email" [(ngModel)]="model.email" class="form-control" placeholder="E-Mail" required email #email="ngModel">
                             <div *ngIf="email.invalid && (email.dirty || email.touched)" class="error">

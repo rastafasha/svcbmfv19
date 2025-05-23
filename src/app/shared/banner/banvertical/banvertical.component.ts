@@ -60,7 +60,7 @@ export class BanverticalComponent implements OnInit {
   
   ngOnInit() {
 
-    this.banverticalService.getBanverticals().subscribe(
+    this.banverticalService.getBanverticalsActivos().subscribe(
       (res:any) => this.banverticals = res.banverticals.data,
       error => this.error = error
     );

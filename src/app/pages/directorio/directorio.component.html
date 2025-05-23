@@ -240,11 +240,11 @@
         <div
           class="col-xs-12 col-sm-6 col-md-4 fr-view card-m"
           *ngFor="
-            let doctor of directories
-              | keys
-              | paginate : { itemsPerPage: count, currentPage: p };
-            let i = index
-          "
+        let doctor of directories
+          | keys
+          | paginate : { itemsPerPage: 10, currentPage: p };
+        let i = index
+      "
         >
           <div class="card">
             <div class="carbodymovil">
