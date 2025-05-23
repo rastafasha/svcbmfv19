@@ -29,25 +29,25 @@ export class BlogService {
       catchError(this.handleError)
     );
   }
-   getBlogSlug(slug: string) {
-          const url = `${this.serverUrl}blog/slug/${slug}`;
-          return this.http.get<any>(url)
-            .pipe(
-              map((resp:{ok: boolean, blogs: Blog[]}) => resp.blogs[0])
-              );
-        }
+  //  getBlogSlug(slug: string) {
+  //         const url = `${this.serverUrl}blog/slug/${slug}`;
+  //         return this.http.get<any>(url)
+  //           .pipe(
+  //             map((resp:{ok: boolean, blogs: Blog[]}) => resp.blogs[0])
+  //             );
+  //       }
   getBlogwithCat(id: number) {
     return this.http.get<Blog>(this.serverUrl + 'blog/showcategory/' + id)
     .pipe(
       catchError(this.handleError)
     );
   }
-  // getBlogSlug(slug: string) {
-  //   return this.http.get<Blog>(this.serverUrl + 'blog/slug/' + slug)
-  //   .pipe(
-  //     catchError(this.handleError)
-  //   );
-  // }
+  getBlogSlug(slug: string) {
+    return this.http.get<Blog>(this.serverUrl + 'blog/slug/' + slug)
+    .pipe(
+      catchError(this.handleError)
+    );
+  }
 
 
   getactivosBlogs() {

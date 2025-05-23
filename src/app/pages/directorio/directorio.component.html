@@ -35,7 +35,7 @@
 <!---Nuevo-->
 <div class="container mt-5 mb-3 escritorio">
     <div class="row elemendirec">
-        <div class="fr-view" *ngFor=" let doctor of directories | keys | paginate: { itemsPerPage: count, currentPage: p }">
+        <div class="fr-view" *ngFor=" let doctor of directories | keys | paginate: { itemsPerPage: 10, currentPage: p }; let i=index">
             <div class="card p-3 mb-2">
                 <div class="d-flex justify-content-between">
                     <div class="elementostop">
@@ -71,17 +71,17 @@
                     <div *ngIf="doctor.website">
                         <p><i class="fa fa-laptop"></i>{{doctor.website}}</p>
                     </div>
-                    <div *ngIf="doctor.telprincipal">
+                    <div *ngIf="doctor.telprincipal && doctor.telprincipal !== 'null'">
                         <p><i class="fa fa-phone"></i>{{doctor.telprincipal}}</p>
                     </div>
-                    <div *ngIf="doctor.tel1">
+                    <div *ngIf="doctor.tel1 && doctor.telprincipal !== 'null'">
                         <p><i class="fa fa-phone"></i>{{doctor.tel1}}</p>
                     </div>
-                    <div *ngIf="doctor.telhome">
+                    <div *ngIf="doctor.telhome && doctor.telprincipal !== 'null'">
                         <p><i class="fa fa-phone"></i>{{doctor.telhome}}</p>
                     </div>
 
-                    <div *ngIf="doctor.telefonos">
+                    <div *ngIf="doctor.telefonos && doctor.telprincipal !== 'null'">
                         <p><i class="fa fa-phone"></i>{{doctor.telefonos}}</p>
                     </div>
                     <p [innerHTML]="doctor.direccion | keepHtml"></p>

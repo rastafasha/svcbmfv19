@@ -11,7 +11,6 @@ export { ResenaHistoricaComponent } from './resena-historica/resena-historica.co
 export { JuntaNacionalComponent } from './junta-nacional/junta-nacional.component';
 export { JuntaRegionalComponent } from './junta-regional/junta-regional.component';
 
-export { BlogpostDetailComponent } from './blogpost-detail/blogpost-detail.component';
 export { BlogpostListComponent } from './blogpost-list/blogpost-list.component';
 export { BlogpostRecentComponent } from './blogpost-recent/blogpost-recent.component';
 export {BlogpostFeaturedComponent} from './blogpost-featured/blogpost-featured.component';

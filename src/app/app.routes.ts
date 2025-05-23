@@ -1,6 +1,8 @@
 import { Routes } from '@angular/router';
-import { ActaConstitutivaComponent, AyudarteComponent, BlogpostDetailComponent, BlogpostListComponent, DirectorioComponent, DocumentosComponent, HomeComponent, JuntaNacionalComponent, JuntaRegionalComponent, NosotrosComponent, PacienteDetailComponent, PacientesComponent, PortalEducativoComponent, ProximamenteComponent, QueesCirugiaComponent, ResenaHistoricaComponent, RevistaComponent, ServiciosComponent, SolvenciasComponent, TipsComponent, TraumaComponent } from './pages/index.paginas';
+import { ActaConstitutivaComponent, AyudarteComponent,  BlogpostListComponent, DirectorioComponent, DocumentosComponent, HomeComponent, JuntaNacionalComponent, JuntaRegionalComponent, NosotrosComponent, PacienteDetailComponent, PacientesComponent, PortalEducativoComponent, ProximamenteComponent, QueesCirugiaComponent, ResenaHistoricaComponent, RevistaComponent, ServiciosComponent, SolvenciasComponent, TipsComponent, TraumaComponent } from './pages/index.paginas';
 import { ContactFormComponent } from './cmspage/contact-form/contact-form.component';
+import { BlogdComponent } from './pages/blogd/blogd.component';
+import { PacientetipdComponent } from './pages/pacientetipd/pacientetipd.component';
 
 
 export const routes: Routes = [
@@ -21,7 +23,7 @@ export const routes: Routes = [
 
   // Area pacientes
   {path: 'tips', component: PacientesComponent},
-  {path: 'tips/:id', component: PacienteDetailComponent},
+  {path: 'tips/:slug', component: PacientetipdComponent},
 
   {path: 'como-podemos-ayudarte', component: AyudarteComponent},
   {path: 'que-es-cirugia-bucal-y-buco-maxilofacial', component: QueesCirugiaComponent},
@@ -30,7 +32,7 @@ export const routes: Routes = [
   {path: 'servicios-de-cirugia-en-el-sistema-publico-de-salud', component: ServiciosComponent},
 
   {path: 'blogs', component: BlogpostListComponent},
-  {path: 'blog/:slug', component: BlogpostDetailComponent},
+  {path: 'blog/:slug', component: BlogdComponent},
   // {path: 'blog/:id', component: BlogpostDetailComponent},
 
   {path: 'revista', component: RevistaComponent},
