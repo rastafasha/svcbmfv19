@@ -3,11 +3,13 @@ import { DirectorioService } from '../../services/directorio.service';
 import { Directorio } from '../../models/directorio';
 import { HttpClient, HttpErrorResponse, HttpBackend } from '@angular/common/http';
 import { environment } from '../../../environments/environment';
-import { CommonModule, NgFor } from '@angular/common';
+import { CommonModule, NgFor, NgIf } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { KeysPipe } from '../../pipes/keys.pipe';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { EscapeHtmlPipe } from '../../pipes/keep-html.pipe';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LoadingComponent } from '../../shared/loading/loading.component';
 
 @Component({
   selector: 'app-directorio',
@@ -15,14 +17,14 @@ import { EscapeHtmlPipe } from '../../pipes/keep-html.pipe';
   standalone: true,
   imports: [
     CommonModule, RouterModule, NgFor, KeysPipe, NgxPaginationModule,
-    EscapeHtmlPipe,
+    EscapeHtmlPipe,FormsModule,ReactiveFormsModule, NgIf, LoadingComponent
   ],
   styleUrls: ['./directorio.component.css']
 })
 export class DirectorioComponent implements OnInit {
 
   directories!: Directorio;
-
+  isLoading = false;
   error!: string;
   doctores:any;
 
@@ -45,7 +47,7 @@ export class DirectorioComponent implements OnInit {
   elementType: 'url' | 'canvas' | 'img' = 'url';
   href!: string;
 
-
+  query:string ='';
 
   constructor(
     public directorioService: DirectorioService,
@@ -64,10 +66,11 @@ export class DirectorioComponent implements OnInit {
   }
 
   getDirectories(): void {
+    this.isLoading = true;
     this.directorioService.getDirectorios().subscribe(
       (res:any) =>{
         this.directories = res.directories.data;
-        console.log(this.directories);
+        this.isLoading = false;
       },
     );
     ( error: string) => this.error = error;
@@ -86,37 +89,55 @@ export class DirectorioComponent implements OnInit {
 
   // }
 
-  search( text: string) {// funciona, devuelve la busqueda
+  // search( text: string) {// funciona, devuelve la busqueda
 
-    if(this.doctores == undefined){
-      console.log('pendiente');
+  //   if(this.doctores == undefined){
+  //     console.log('pendiente');
 
-    }
+  //   }
 
 
-    if( this.search.length == 0){
-      return;
+  //   if( this.search.length == 0){
+  //     return;
 
-    }
+  //   }
 
-    return this.http.get(this.ServerUrl + 'api_directorio/search?text=' + text )
-      .toPromise()
-      .then((doctores: Object | undefined) => {
-        this.doctores = {
-          'results': JSON.stringify(doctores, null),
-          'json': () => {
-            return doctores;
-          }
-        };
-        // console.log(this.doctores);
-        // devolver el array
-        const mapped = doctores ? Object.keys(doctores)
-          .map(key => ({ type: key, value: (doctores as any)[key] })) : [];
+  //   return this.http.get(this.ServerUrl + 'api_directorio/search?text=' + text )
+  //     .toPromise()
+  //     .then((doctores: Object | undefined) => {
+  //       this.doctores = {
+  //         'results': JSON.stringify(doctores, null),
+  //         'json': () => {
+  //           return doctores;
+  //         }
+  //       };
+  //       // console.log(this.doctores);
+  //       // devolver el array
+  //       const mapped = doctores ? Object.keys(doctores)
+  //         .map(key => ({ type: key, value: (doctores as any)[key] })) : [];
 
-        this.doctores = doctores;
-        // console.log(this.doctores);
+  //       this.doctores = doctores;
+  //       // console.log(this.doctores);
+  //     });
+
+  // }
+
+
+
+public PageSize(): void {
+    this.getDirectories();
+    this.query = '';
+  }
+
+
+   search() {
+    return this.directorioService.search(this.query).subscribe(
+      (res:any)=>{
+        this.directories = res;
+        if(!this.query){
+          this.ngOnInit();
+        }
       });
-
   }
 
 

@@ -46,7 +46,7 @@ export class DirectorioService {
   }
 
   getRecentDirectorios() {
-    return this.http.get<Directorio>(this.ServerUrl + 'directorio/recent_Directorios/').pipe(
+    return this.http.get<Directorio>(this.ServerUrl + 'directory/recent_Directorios/').pipe(
       catchError(this.handleError)
     );
   }
@@ -67,7 +67,7 @@ export class DirectorioService {
 
   mostrarDirectorios( desde: number = 0 ) {
 
-    let url = this.ServerUrl  + 'directorio/Directorios/medico?desde=' + desde;
+    let url = this.ServerUrl  + 'directory/Directorios/medico?desde=' + desde;
     return this.http.get( url );
 
   }
@@ -76,6 +76,11 @@ export class DirectorioService {
     let url = this.ServerUrl + 'medico/' + id;
     return this.http.get(url)
     .pipe(map((resp: any) => resp.directorios));
+  }
+
+  search(query=''){
+    return this.http.get(`${this.ServerUrl}directory/search`, {params: {buscar: query}})
+
   }
 
 
