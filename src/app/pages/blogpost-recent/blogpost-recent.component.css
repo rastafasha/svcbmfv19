@@ -45,10 +45,12 @@
 
 .desktop {
     display: block;
+    column-width: 330px;
 }
 
 .movil {
     display: none;
+    column-width: 0px;
 }
 
 @media(max-width:768px) {

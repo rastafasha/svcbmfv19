@@ -14,6 +14,7 @@ import { SafePipe } from '../../pipes/safe.pipe';
 import { BlogpostRecentComponent } from '../index.paginas';
 import { BancuadradoComponent } from '../../shared/banner/bancuadrado/bancuadrado.component';
 import { BanverticalComponent } from '../../shared/banner/banvertical/banvertical.component';
+import { LoadingComponent } from '../../shared/loading/loading.component';
 
 
 @Component({
@@ -21,7 +22,8 @@ import { BanverticalComponent } from '../../shared/banner/banvertical/banvertica
   imports: [
     // DecoupledEditor,
      NgIf, CommonModule, SafePipe,
-     BlogpostRecentComponent, BanverticalComponent, BancuadradoComponent
+     BlogpostRecentComponent, BanverticalComponent, 
+     BancuadradoComponent,NgIf,LoadingComponent
   ],
   templateUrl: './blogd.component.html',
   styleUrl: './blogd.component.css'
@@ -30,6 +32,7 @@ export class BlogdComponent {
 
   // blog!: Observable<Blog>;
     blog!: Blog;
+    isLoading: boolean = true;
     
     slug:any;
     // public Editor = DecoupledEditor;
@@ -46,12 +49,14 @@ export class BlogdComponent {
     ngOnInit() {
   
       const slug = this.activatedRoute.snapshot.paramMap.get('slug');
-      
+      this.isLoading = true;
+
           this.slug = slug;
+
           this.blogService.getBlogSlug(this.slug).subscribe(
             (res:any) => {
               this.blog = res.blog;
-              console.log(this.blog);
+              this.isLoading = false;
             }
           );
   

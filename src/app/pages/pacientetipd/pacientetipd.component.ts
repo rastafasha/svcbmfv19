@@ -40,22 +40,10 @@ const slug = this.activatedRoute.snapshot.paramMap.get('slug');
           this.pacienteService.getPacientesSlug(this.slug).subscribe(
             (res:any) => {
               this.paciente = res.paciente;
-              console.log(this.paciente);
+              // console.log(this.paciente);
             }
           );
 
-      // this.activatedRoute.params.subscribe(({id}) => {
-      //     this.getProfile(id);
-      //   });
-      // this.paciente$ = this.route.paramMap.pipe(
-      //   switchMap((params: ParamMap) => {
-      //     const idParam = params.get('id');
-      //     if (idParam === null) {
-      //       throw new Error('ID parameter is missing');
-      //     }
-      //     return this.pacienteService.getPaciente(+idParam);
-      //   })
-      // );
       window.scrollTo(0,0);
   
       //this.titleService.setTitle('SVCBMF - Blog Detail');

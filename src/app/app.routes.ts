@@ -1,5 +1,7 @@
 import { Routes } from '@angular/router';
-import { ActaConstitutivaComponent, AyudarteComponent,  BlogpostListComponent, DirectorioComponent, DocumentosComponent, HomeComponent, JuntaNacionalComponent, JuntaRegionalComponent, NosotrosComponent, PacienteDetailComponent, PacientesComponent, PortalEducativoComponent, ProximamenteComponent, QueesCirugiaComponent, ResenaHistoricaComponent, RevistaComponent, ServiciosComponent, SolvenciasComponent, TipsComponent, TraumaComponent } from './pages/index.paginas';
+import { ActaConstitutivaComponent, AyudarteComponent,  BlogpostListComponent, DirectorioComponent, DocumentosComponent, 
+  HomeComponent, JuntaNacionalComponent, JuntaRegionalComponent, NosotrosComponent, 
+  PacientesComponent, PortalEducativoComponent, ProximamenteComponent, QueesCirugiaComponent, ResenaHistoricaComponent, RevistaComponent, ServiciosComponent, SolvenciasComponent, TipsComponent, TraumaComponent } from './pages/index.paginas';
 import { ContactFormComponent } from './cmspage/contact-form/contact-form.component';
 import { BlogdComponent } from './pages/blogd/blogd.component';
 import { PacientetipdComponent } from './pages/pacientetipd/pacientetipd.component';

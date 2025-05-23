@@ -1,8 +1,10 @@
-<div class="container">
+
+<app-loading *ngIf="isLoading" ></app-loading>
+<div class="container" *ngIf="!isLoading">
     <div class="right-widget recent-post desktop">
         <h3>Blogs recientes</h3>
         <div *ngFor="let blog of blogs | slice:0:4 " class="mt-1 ">
-            <a [routerLink]="['/blog', blog.id]">
+            <a href="blog/{{blog.slug}}" target="_self">
                 <div class="rb-box">
                     <div class="rb-box-img">
                         <img src="{{blog.image}}" alt="{{blog.title}}" />
@@ -18,7 +20,7 @@
     <div class="right-widget recent-post movil">
         <h3>Blogs recientes</h3>
         <div *ngFor="let blog of blogs | slice:0:4 " class="mt-1 hidden-xs">
-            <a href="blog/{{blog.id}}" target="_self">
+            <a href="blog/{{blog.slug}}" target="_self">
                 <div class="rb-box">
                     <div class="rb-box-img">
                         <img src="{{blog.image}}" alt="{{blog.title}}" />

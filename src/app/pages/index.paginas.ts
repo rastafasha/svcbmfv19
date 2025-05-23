@@ -21,7 +21,6 @@ export {TipsComponent} from './tips/tips.component';
 export {TraumaComponent} from './trauma/trauma.component';
 export {AyudarteComponent} from './ayudarte/ayudarte.component';
 export {ServiciosComponent} from './servicios/servicios.component';
-export{PacienteDetailComponent} from './pacientes-detail/paciente-detail.component';
 export{PacienteRecentComponent} from './paciente-recent/paciente-recent.component';
 export {ProximamenteComponent} from './proximamente/proximamente.component';
 
