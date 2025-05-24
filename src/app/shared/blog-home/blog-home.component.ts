@@ -34,9 +34,9 @@ ascending = true;
 
   ngOnInit() {
     this.isLoading = true;
-    this.blogService.getBlogs().subscribe(
+    this.blogService.getFeaturedBlogs().subscribe(
       (res:any) => {
-        this.blogs = res.blogs.data
+        this.blogs = res.blogsdestacados.data
         this.isLoading = false
       },
       error => this.error = error

@@ -13,10 +13,10 @@
                             </div>
                         </div>
                         <div class="col-12 col-sm-12 col-md-12" style="padding-top: 10px;">
-                            <a [routerLink]="['/blog', blog.id]">
+                            <a [routerLink]="['/blog', blog.slug]">
                                 <h5>{{blog.title}}</h5>
                             </a>
-                            <p>{{blog.description|slice:0:30}}...</p>
+                            <!-- <p>{{blog.description|slice:0:30}}...</p> -->
                         </div>
                     </div>
 
@@ -28,7 +28,7 @@
                             <a [routerLink]="['/blog', blog.slug]">
                                 <h5>{{blog.title}}</h5>
                             </a>
-                            <p>{{blog.description|slice:0:30}}...</p>
+                            <!-- <p>{{blog.description|slice:0:30}}...</p> -->
                         </div>
                     </div>
 

@@ -6,8 +6,9 @@
                     <img src="{{blog.avatar}}" alt="blog1" />
                     <h3>{{blog.title}}</h3>
                     <p>by <span>{{blog?.autor}}</span> on <span>{{blog.created_at | date:'mediumDate'}}</span></p>
-                    <p>{{blog?.description | slice:0:30}}</p>
-                    <a [routerLink]="['/blog', blog.slug]" class="btn btn-danger">Read more...</a>
+                    <!-- <p>{{blog?.description | slice:0:30}}</p> -->
+                    <!-- <div [innerHtml]="blog.description | safe: 'html' "></div> -->
+                    <a [routerLink]="['/blog', blog.slug]" class="btn btn-danger">+info</a>
                 </div>
             </div>
         </div>

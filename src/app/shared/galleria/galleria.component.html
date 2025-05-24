@@ -12,8 +12,8 @@
             <div id="links" class=" gallery row Contenedor_imagen Contenedor_imagen1 Contenedor_imagenMarf ">
 
 
-                <a href="{{galeria.image}}" data-gallery class="col-6 col-sm-3" *ngFor=" let galeria of galerias | keys | paginate: { itemsPerPage: 10, currentPage: p }; let i=index">
-                    <img src="{{galeria.image}}" alt="svcbmf" style="height: 240px;">
+                <a href="{{galeria.avatar}}" data-gallery class="col-6 col-sm-3" *ngFor=" let galeria of galerias | keys | paginate: { itemsPerPage: 10, currentPage: p }; let i=index">
+                    <img src="{{galeria.avatar}}" alt="svcbmf" style="height: 240px;">
                 </a>
             </div>
         </div>

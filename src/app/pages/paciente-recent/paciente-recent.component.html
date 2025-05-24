@@ -2,7 +2,7 @@
     <div class="right-widget recent-post desktop">
         <h3>Tips recientes</h3>
         <div *ngFor="let paciente of pacientes | slice:0:4 " class="mt-1">
-            <a [routerLink]="['/tips', paciente.title]">
+            <a [routerLink]="['/tips', paciente.slug]">
                 <div class="rb-box">
                     <div class="rb-box-img">
                         <img src="{{paciente.avatar}}" alt="{{paciente.title}}" />
@@ -18,7 +18,7 @@
     <div class="right-widget recent-post movil">
         <h3>Tips recientes</h3>
         <div *ngFor="let paciente of pacientes | slice:0:4 " class="mt-1">
-            <a href="tips/{{paciente.title}}" target="_self">
+            <a href="tips/{{paciente.slug}}" target="_self">
                 <div class="rb-box">
                     <div class="rb-box-img">
                         <img src="{{paciente.avatar}}" alt="{{paciente.title}}" />

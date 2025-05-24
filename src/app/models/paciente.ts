@@ -1,6 +1,7 @@
 export class Paciente {
     id!: number;
     title!: string;
+    slug!: string;
     autor!: string;
     seo_title!: string;
     user_id!: number;
