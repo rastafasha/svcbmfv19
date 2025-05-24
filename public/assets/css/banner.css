@@ -301,8 +301,9 @@ body {
         background-size: contain;
         background-repeat: no-repeat;
     }
-    .BannPpal {
-        height: 100%;
+     .BannPpal {
+        height: 100vh;
+        top: -80px;
     }
     .fill {
         width: 100%;
