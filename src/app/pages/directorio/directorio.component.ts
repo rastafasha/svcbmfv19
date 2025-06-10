@@ -8,8 +8,9 @@ import { RouterModule } from '@angular/router';
 import { KeysPipe } from '../../pipes/keys.pipe';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { EscapeHtmlPipe } from '../../pipes/keep-html.pipe';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoadingComponent } from '../../shared/loading/loading.component';
+import { EstadosService } from '../../services/estados.service';
 
 @Component({
   selector: 'app-directorio',
@@ -26,6 +27,9 @@ export class DirectorioComponent implements OnInit {
   directories!: Directorio;
   isLoading = false;
   error!: string;
+  estados!:any[];
+  estado!:string;
+  especialidad!:any;
   doctores:any;
 
   private http: HttpClient;
@@ -48,10 +52,13 @@ export class DirectorioComponent implements OnInit {
   href!: string;
 
   query:string ='';
+  searchForm!:FormGroup;
+  currentPage = 1;
 
   constructor(
     public directorioService: DirectorioService,
-
+    public estadosService: EstadosService,
+    private fb:FormBuilder,
     handler: HttpBackend) {
     this.http = new HttpClient(handler);
 
@@ -60,8 +67,9 @@ export class DirectorioComponent implements OnInit {
   ngOnInit() {
 
     window.scrollTo(0,0);
+    this.getEstadosList();
     this.getDirectories();
-
+    this.validarFormularioPerfil();
 
   }
 
@@ -75,6 +83,23 @@ export class DirectorioComponent implements OnInit {
     );
     ( error: string) => this.error = error;
   }
+
+   getEstadosList(): void {
+    this.estadosService.getEstados().subscribe(
+      (res:any) =>{
+        this.estados = res.estados;
+        console.log(res);
+      }
+    );
+  }
+
+  getSpecialitiesList(){
+    // this.specialityService.getSpecialitys().subscribe((resp:any)=>{
+    //   this.specialities = resp;
+    //   // console.log(resp);
+    // })
+  }
+
 
   toggleClass(id: number){
     this.classApplied = !this.classApplied;
@@ -135,7 +160,7 @@ public PageSize(): void {
       (res:any)=>{
         this.directories = res;
         if(!this.query){
-          this.ngOnInit();
+          this.getDirectories();
         }
       });
   }
@@ -167,7 +192,39 @@ public PageSize(): void {
     console.log('vcard', this.vcard);
   }
 
+ 
+  validarFormularioPerfil(){
+    this.searchForm = this.fb.group({
+      estado: [''],
+      especialidad: [''],
+      query: [''],
+      id: [''],
+    });
+  }
 
+
+
+ onSearch(){
+    const formValue = this.searchForm.value;
+    console.log(this.searchForm.value);
+    this.getDirectoryFilter();
+    } 
+
+    getDirectoryFilter(){
+      this.isLoading = true;
+      this.currentPage;
+      this.estado = this.searchForm.value.estado;
+      this.especialidad = this.searchForm.value.especialidad;
+      this.directorioService.getAllDirectoryFiltered(
+        // this.currentPage,
+        this.estado, 
+        this.especialidad,
+      ).subscribe((resp:any)=>{
+        console.log(resp);
+        this.isLoading = false;
+       
+      })
+    }
 
 
 }

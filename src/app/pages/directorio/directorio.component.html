@@ -24,59 +24,85 @@
   <div class="col-12">
     <div class="buscador col">
       <!-- buscador -->
-            <form class="form-horizontal">
-              <div class="p-1 bg-light rounded rounded-pill shadow-sm mb-4">
-                <div class="input-group">
-                  <input
-                    type="search"
-                    name="search"
-                    type="text"
-                    class="form-control col-xs-12"
-                    placeholder="Buscar.."
-                    [(ngModel)]="query"
-                    aria-describedby="button-addon1"
-                    class="form-control border-0 bg-light"
-                  />
-                  <div class="input-group-append">
-                    <button
-                      id="button-addon1"
-                      type="submit"
-                      class="btn btn-link text-primary"
-                      (click)="search()"
-                      name="submit"
-                      data-toggle="tooltip"
-                      title="mostrar todos"
-                    >
-                      <i class="fa fa-search"></i>
-                    </button>
-                    <a
-                      href="javascript:;"
-                      (click)="PageSize()"
-                      class="btn btn-primary doctor-refresh ms-2"
-                      ><i class="fa fa-refresh"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-            </form>
-            <!-- buscador -->
+      <!-- <form [formGroup]="searchForm" *ngIf="!isLoading" class="form-horizontal">
+
+        <div class="row search5 p-1 bg-light rounded rounded-pill shadow-sm mb-4">
+          <div class="col-12 col-md-3">
+            <label class="labelgoogle">
+              <input class="form-control input" formControlName="query" type="search" placeholder="Buscar..."
+                aria-label="Search">
+
+            </label>
+
+          </div>
+
+          <div class="col-12 col-md-3">
+            <div class="input-group">
+              <label>{{'Estado'}} </label>
+              <select class="form-control" formControlName="estado">
+                <option *ngFor="let estado of estados" [value]="estado.nombre">
+                  {{estado.nombre}}
+                </option>
+              </select>
+            </div>
+          </div>
+
+          <div class=" col-12 col-md-2">
+            <label for="exampleInputEmail1">Especialidad <span class="required">*</span></label>
+
+            <select name="" id="input" class="form-control" formControlName="especialidad" required="required">
+              <option value="">Seleccione</option>
+              <option value="Cirugía Buco-maxilofacial">Cirugía Buco-maxilofacial</option>
+              <option value="Cirugía Maxilofacial">Cirugía Maxilofacial</option>
+              <option value="Cirugía Bucal">Cirugía Bucal</option>
+            </select>
+          </div>
+          <div class="col-12 col-md-2 ">
+            <div class="doctor-submit d-flex justify-content-center ">
+              <button type="button" class="btn btn-primary submit-list-form " (click)="onSearch()">
+               
+                <i class="fa fa-search"></i>
+              </button>
+              <button type="button" class="btn btn-outline-primary submit-list-form " (click)="PageSize()">
+                <i class="fa fa-refresh"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </form> -->
+
+
+      <form class="form-horizontal">
+        <div class="p-1 bg-light rounded rounded-pill shadow-sm mb-4">
+          <div class="input-group">
+            <input type="search" name="search" type="text" class="form-control col-xs-12" placeholder="Encuentre por: Nombre y Apellido, Especialidad, Estado, Ciudad, Télefono"
+              [(ngModel)]="query" aria-describedby="button-addon1" class="form-control border-0 bg-light" />
+            <div class="input-group-append">
+              <button id="button-addon1" type="submit" class="btn btn-link text-primary" (click)="search()"
+                name="submit" data-toggle="tooltip" title="mostrar todos">
+                <i class="fa fa-search"></i>
+              </button>
+              <a href="javascript:;" (click)="PageSize()" class="btn btn-primary doctor-refresh ms-2"><i
+                  class="fa fa-refresh"></i></a>
+            </div>
+          </div>
+        </div>
+      </form>
+      <!-- buscador -->
     </div>
   </div>
 </div>
 
-<app-loading *ngIf="isLoading" ></app-loading>
+<app-loading *ngIf="isLoading"></app-loading>
 <!---Nuevo-->
-<div class="container mt-5 mb-3 escritorio" *ngIf="!isLoading"  >
+<div class="container mt-5 mb-3 escritorio" *ngIf="!isLoading">
   <div class="row elemendirec">
-    <div
-      class="fr-view"
-      *ngFor="
+    <div class="fr-view" *ngFor="
         let doctor of directories
           | keys
           | paginate : { itemsPerPage: 10, currentPage: p };
         let i = index
-      "
-    >
+      ">
       <div class="card p-3 mb-2">
         <div class="d-flex justify-content-between">
           <div class="elementostop">
@@ -87,10 +113,7 @@
             </div>
             <div *ngIf="doctor.image">
               <div class="icon icon1">
-                <img
-                  src="{{ imagenSerUrl }}/directorio/{{ doctor.image }}"
-                  class="img-circle"
-                />
+                <img src="{{ imagenSerUrl }}/directorio/{{ doctor.image }}" class="img-circle" />
               </div>
             </div>
             <div class="ms-2 c-details">
@@ -129,40 +152,28 @@
           <div class="redess">
             <div *ngIf="doctor.facebook">
               <p>
-                <a
-                  href="https://facebook.com/{{ doctor.facebook }}"
-                  target="_blank"
-                >
+                <a href="https://facebook.com/{{ doctor.facebook }}" target="_blank">
                   <i class="fa fa-facebook"></i>
                 </a>
               </p>
             </div>
             <div *ngIf="doctor.instagram">
               <p>
-                <a
-                  href="https://instagram.com/{{ doctor.instagram }}"
-                  target="_blank"
-                >
+                <a href="https://instagram.com/{{ doctor.instagram }}" target="_blank">
                   <i class="fa fa-instagram"></i>
                 </a>
               </p>
             </div>
             <div *ngIf="doctor.twitter">
               <p>
-                <a
-                  href="https://twitter.com/{{ doctor.twitter }}"
-                  target="_blank"
-                >
+                <a href="https://twitter.com/{{ doctor.twitter }}" target="_blank">
                   <i class="fa fa-twitter"></i>
                 </a>
               </p>
             </div>
             <div *ngIf="doctor.linkedin">
               <p>
-                <a
-                  href="https://linkedin.com/{{ doctor.linkedin }}"
-                  target="_blank"
-                >
+                <a href="https://linkedin.com/{{ doctor.linkedin }}" target="_blank">
                   <i class="fa fa-linkedin"></i>
                 </a>
               </p>
@@ -172,13 +183,8 @@
       </div>
 
       <!---modal QR-->
-      <div
-        class="modal fade modalproductos"
-        id="vcard_{{ doctor.id }}"
-        tabindex="-1"
-        aria-labelledby="exampleModalLabel"
-        aria-hidden="true"
-      >
+      <div class="modal fade modalproductos" id="vcard_{{ doctor.id }}" tabindex="-1"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
@@ -189,12 +195,7 @@
                   Para descargar: boton derecho, (Opcion guardar imagen como)
                 </p>
               </div>
-              <button
-                type="button"
-                class="close"
-                data-dismiss="modal"
-                aria-label="Close"
-              >
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
@@ -220,7 +221,7 @@
 <!---Nuevo-->
 
 <!---movil-->
-<div class="container movil" *ngIf="!isLoading" >
+<div class="container movil" *ngIf="!isLoading">
   <div class="row">
     <div class="col-12">
       <div class="row">
@@ -229,23 +230,17 @@
         <!--Including the pagination control.-->
         <div class="col-xs-12 col-sm-12 mt-4 mb-4">
           <div class="text-center">
-            <pagination-controls
-              (pageChange)="p = $event"
-              previousLabel="Anterior"
-              nextLabel="Siguiente"
-            ></pagination-controls>
+            <pagination-controls (pageChange)="p = $event" previousLabel="Anterior"
+              nextLabel="Siguiente"></pagination-controls>
           </div>
         </div>
         <div class="clear"></div>
-        <div
-          class="col-xs-12 col-sm-6 col-md-4 fr-view card-m"
-          *ngFor="
+        <div class="col-xs-12 col-sm-6 col-md-4 fr-view card-m" *ngFor="
         let doctor of directories
           | keys
           | paginate : { itemsPerPage: 10, currentPage: p };
         let i = index
-      "
-        >
+      ">
           <div class="card">
             <div class="carbodymovil">
               <div class="col-xs-12">
@@ -255,10 +250,7 @@
                       <img src="./assets/img/logo.png" class="img-circle" />
                     </div>
                     <div *ngIf="doctor.image">
-                      <img
-                        src="{{ imagenSerUrl }}/directorio/{{ doctor.image }}"
-                        class="img-circle"
-                      />
+                      <img src="{{ imagenSerUrl }}/directorio/{{ doctor.image }}" class="img-circle" />
                     </div>
                   </div>
                   <div class="infodatos">
@@ -276,11 +268,8 @@
                                         <h6 class="card-subtitle mb-2 text-muted">{{doctor.especialidad}}</h6>
                                         <h6 class="card-subtitle mb-2 text-muted">{{doctor.ciudad}}</h6>
                                     </div> -->
-                  <button
-                    class="btn btn-link btn-outline-primary"
-                    data-toggle="modal"
-                    [attr.data-target]="'#' + doctor.id"
-                  >
+                  <button class="btn btn-link btn-outline-primary" data-toggle="modal"
+                    [attr.data-target]="'#' + doctor.id">
                     + info
                   </button>
                 </div>
@@ -289,14 +278,8 @@
           </div>
 
           <!---modal-->
-          <div
-            class="modal fade modalproductos"
-            id="{{ doctor.id }}"
-            tabindex="-1"
-            role="dialog"
-            aria-labelledby="exampleModalLabel"
-            aria-hidden="true"
-          >
+          <div class="modal fade modalproductos" id="{{ doctor.id }}" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header elementos-modal">
@@ -304,18 +287,10 @@
                     <img src="./assets/img/logo.png" class="img-circle" />
                   </div>
                   <div *ngIf="doctor.image">
-                    <img
-                      src="{{ imagenSerUrl }}/directorio/{{ doctor.image }}"
-                      class="img-circle"
-                    />
+                    <img src="{{ imagenSerUrl }}/directorio/{{ doctor.image }}" class="img-circle" />
                   </div>
                   <h3>{{ doctor.surname }}, {{ doctor.nombre }}</h3>
-                  <button
-                    type="button"
-                    class="close"
-                    data-dismiss="modal"
-                    aria-label="Close"
-                  >
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
@@ -356,42 +331,30 @@
                       <div class="redess">
                         <div *ngIf="doctor.facebook">
                           <p>
-                            <a
-                              href="https://facebook.com/{{ doctor.facebook }}"
-                              target="_blank"
-                            >
+                            <a href="https://facebook.com/{{ doctor.facebook }}" target="_blank">
                               <i class="fa fa-facebook"></i>
                             </a>
                           </p>
                         </div>
                         <div *ngIf="doctor.instagram">
                           <p>
-                            <a
-                              href="https://instagram.com/{{
+                            <a href="https://instagram.com/{{
                                 doctor.instagram
-                              }}"
-                              target="_blank"
-                            >
+                              }}" target="_blank">
                               <i class="fa fa-instagram"></i>
                             </a>
                           </p>
                         </div>
                         <div *ngIf="doctor.twitter">
                           <p>
-                            <a
-                              href="https://twitter.com/{{ doctor.twitter }}"
-                              target="_blank"
-                            >
+                            <a href="https://twitter.com/{{ doctor.twitter }}" target="_blank">
                               <i class="fa fa-twitter"></i>
                             </a>
                           </p>
                         </div>
                         <div *ngIf="doctor.linkedin">
                           <p>
-                            <a
-                              href="https://linkedin.com/{{ doctor.linkedin }}"
-                              target="_blank"
-                            >
+                            <a href="https://linkedin.com/{{ doctor.linkedin }}" target="_blank">
                               <i class="fa fa-linkedin"></i>
                             </a>
                           </p>
@@ -427,10 +390,6 @@
 <!--Including the pagination control.-->
 <div class="col-xs-12 mt-4 mb-4">
   <div class="text-center">
-    <pagination-controls
-      (pageChange)="p = $event"
-      previousLabel="Anterior"
-      nextLabel="Siguiente"
-    ></pagination-controls>
+    <pagination-controls (pageChange)="p = $event" previousLabel="Anterior" nextLabel="Siguiente"></pagination-controls>
   </div>
 </div>

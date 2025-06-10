@@ -1,5 +1,4 @@
-export class Estados {
-    id!: number;
-    nombre!: string;
+export interface Estado {
+  id: number;
+  nombre: string;
 }
-

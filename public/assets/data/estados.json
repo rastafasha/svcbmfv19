@@ -1,0 +1,31 @@
+ {
+  "estados":
+  [
+  { "id": 1, "nombre": "Seleccione" },
+  { "id": 2, "nombre": "Amazonas" },
+  { "id": 3, "nombre": "Anzoátegui" },
+  { "id": 4, "nombre": "Apure" },
+  { "id": 5, "nombre": "Aragua" },
+  { "id": 6, "nombre": "Barinas" },
+  { "id": 7, "nombre": "Bolívar" },
+  { "id": 8, "nombre": "Carabobo" },
+  { "id": 9, "nombre": "Cojedes" },
+  { "id": 10, "nombre": "Delta Amacuro" },
+  { "id": 11, "nombre": "Distrito Capital" },
+  { "id": 12, "nombre": "Falcón" },
+  { "id": 13, "nombre": "Guárico" },
+  { "id": 14, "nombre": "Lara" },
+  { "id": 15, "nombre": "Mérida" },
+  { "id": 16, "nombre": "Miranda" },
+  { "id": 17, "nombre": "Monagas" },
+  { "id": 18, "nombre": "Nueva Esparta" },
+  { "id": 19, "nombre": "Portuguesa" },
+  { "id": 20, "nombre": "Sucre" },
+  { "id": 21, "nombre": "Táchira" },
+  { "id": 22, "nombre": "Trujillo" },
+  { "id": 23, "nombre": "Vargas" },
+  { "id": 24, "nombre": "Yaracuy" },
+  { "id": 25, "nombre": "Zulia" }
+  
+]
+ }

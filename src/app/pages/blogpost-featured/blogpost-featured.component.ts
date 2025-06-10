@@ -9,7 +9,7 @@ import { SafePipe } from '../../pipes/safe.pipe';
   selector: 'app-blogpost-featured',
   templateUrl: './blogpost-featured.component.html',
   imports: [
-    CommonModule, RouterModule, NgFor, SafePipe,
+    CommonModule, RouterModule, NgFor
   ],
   styleUrls: ['./blogpost-featured.component.css']
 })

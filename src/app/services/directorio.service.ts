@@ -37,6 +37,35 @@ export class DirectorioService {
   //     )
   // }
 
+  getAllDirectoryFiltered(
+        
+        // created_at = '',
+        // page = 1,
+        estado = '',
+        especialidad?: ''
+      ) {
+        let LINK = '';
+    
+        // if (estado) LINK += `&estado=${estado}`;
+        if (estado) {
+          LINK += '&estado=' + estado;
+        }
+        if (especialidad) LINK += `&especialidad=${especialidad}`;
+        
+  
+        const URL =
+          this.ServerUrl +
+          'directory/directoryFiltered/' +
+          
+          LINK;
+        return this.http.get<any>(URL);
+  
+        // return this.http.get<any>(URL, this.headers)
+        //   .pipe(
+        //     map((resp:{ok: boolean, directories: Directorio}) => resp.directories)
+        //     );
+      }
+
 
   getDirectorio(id: number) {
     return this.http.get<Directorio>(this.ServerUrl + 'directory/show/' + id)
