@@ -10,6 +10,7 @@ import { LoadingComponent } from '../loading/loading.component';
 @Component({
   selector: 'app-blog-home',
   templateUrl: './blog-home.component.html',
+  styleUrls: ['./blog-home.component.css'],
   imports: [
     CommonModule,RouterModule, NgIf, LoadingComponent
   ],

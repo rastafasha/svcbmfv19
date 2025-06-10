@@ -1,0 +1,23 @@
+.grupo{
+    display: flex;
+    flex-direction: row;
+    gap:10px
+}
+
+.grupo .card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.box-g{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.imageblg{
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: contain;
+}

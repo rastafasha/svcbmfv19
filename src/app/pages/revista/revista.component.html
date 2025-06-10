@@ -18,23 +18,39 @@
         </div>
         <br><br>
         <p>Total: {{total}}</p>
-        <div class="grupo caja fr-view mt-1" *ngFor=" let revista of revistas | keys | paginate: { itemsPerPage: count, currentPage: p }">
+        <div class="grupo caja fr-view mt-1" >
+            <div *ngFor=" let revista of revistas | keys | paginate: { itemsPerPage: count, currentPage: p }">
 
-            <a href="{{revista.archivo}}" target="_blank">
-                <div class="grupo cancion ">
-                    <img src="assets/img/pdf-icon.png" alt="">
-                    <div class="caja ">
-                        <h3 class="cancion__titulo">
-                            Volumen: {{revista.volumen}} | Numero:{{revista.numero}} | Fecha: {{revista.fecha}}
-                        </h3>
-                    </div>
-                    <div class="caja ">
-                        <div class="cancion__opciones">
-                            <i class="fa fa-external-link" aria-hidden="true"></i>
-                        </div>
+                <div class="card ">
+                    <div class="card-body imageblg" >
+                        <img src="{{revista.image}}" alt="">
+                        <a href="{{revista.archivo}}" target="_blank">
+                            <div class="grupo cancion g_box">
+                                <!-- <img src="assets/img/pdf-icon.png" alt=""> -->
+                                <div class="caja ">
+                                    <h3 class="cancion__titulo">
+                                        Volumen: {{revista.volumen}}
+                                    </h3>
+                                    <h4 >
+                                        Numero:{{revista.numero}}
+                                    </h4>
+                                    <p >
+                                       Fecha: {{revista.fecha}}
+                                    </p>
+                                </div>
+                                <!-- <div class="caja ">
+                                    <div class="cancion__opciones">
+                                        <i class="fa fa-external-link" aria-hidden="true"></i>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </a>
                     </div>
                 </div>
-            </a>
+
+            </div>
+
+            
             <div class="clea"></div><br>
 
         </div>

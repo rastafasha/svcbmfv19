@@ -3,7 +3,7 @@
 <div class="row" *ngIf="!isLoading">
     <div class=" col-12 col-sm-12 col-md-6  fr-view" style="margin-bottom: 20px;" *ngFor="let blog of blogs | slice:0:4 ">
         <div class=" card cardblog">
-            <div class="card-body ">
+            <div class="card-body imageblg" [ngStyle]="{'background-image': 'url(' + blog.avatar + ')'}">
                 <div class="row">
 
                     <div *ngIf="blog.video ">
@@ -16,18 +16,22 @@
                             <a [routerLink]="['/blog', blog.slug]">
                                 <h5>{{blog.title}}</h5>
                             </a>
+                            <br>
+                            <small>{{blog.created_at|date}}</small>
                             <!-- <p>{{blog.description|slice:0:30}}...</p> -->
                         </div>
                     </div>
 
                     <div *ngIf="!blog.video ">
                         <a [routerLink]="['/blog', blog.slug]">
-                            <div class="col-12 col-sm-12 col-md-12 imgnott nopadd" [ngStyle]="{'background-image': 'url(' + blog.avatar + ')'}"></div>
+                            <div class="col-12 col-sm-12 col-md-12 imgnott nopadd" ></div>
                         </a>
                         <div class="col-12 col-sm-12 col-md-12" style="padding-top: 10px;">
                             <a [routerLink]="['/blog', blog.slug]">
                                 <h5>{{blog.title}}</h5>
                             </a>
+                            <br>
+                            <small>{{blog.created_at|date}}</small>
                             <!-- <p>{{blog.description|slice:0:30}}...</p> -->
                         </div>
                     </div>
