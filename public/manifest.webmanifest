@@ -1,6 +1,7 @@
 {
-  "name": "svcbfv19",
-  "short_name": "svcbfv19",
+  "name": "SVCBMF",
+  "short_name": "SVCBMF",
+  "description": "Sitio oficial de la Sociedad Venezolana de Cirugía Bucomáxilofacial con información de interés sobre la especialidad para miembros y público en general",
   "display": "standalone",
   "scope": "./",
   "start_url": "./",
