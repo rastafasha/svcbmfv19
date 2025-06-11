@@ -9,15 +9,16 @@ import { BlogHomeComponent } from '../../shared/blog-home/blog-home.component';
 import { BancuadradoComponent } from '../../shared/banner/bancuadrado/bancuadrado.component';
 import { BanhorizontalComponent } from '../../shared/banner/banhorizontal/banhorizontal.component';
 import { BanverticalComponent } from '../../shared/banner/banvertical/banvertical.component';
+import { RouterModule } from '@angular/router';
 
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   imports: [
-    CommonModule, HttpClientModule, SliderComponent,
+    CommonModule, SliderComponent,
     BlogHomeComponent, BancuadradoComponent,
-    BanhorizontalComponent,BanverticalComponent
+    BanhorizontalComponent,BanverticalComponent, RouterModule
   ],
   styleUrls: ['./home.component.css']
 })
