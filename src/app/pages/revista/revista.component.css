@@ -21,3 +21,9 @@
     background-repeat: no-repeat;
     background-size: contain;
 }
+
+@media (max-width:768px) {
+    .grupo{
+        flex-direction: column;
+    }
+}
