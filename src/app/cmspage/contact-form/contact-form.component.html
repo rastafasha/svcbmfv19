@@ -3,7 +3,7 @@
         <h1 class="up">Contáctenos</h1>
     </div>
 </section>
-<div class="container">
+<div class="container mt-5">
     <div class="row">
         <div class="col-12 text-center">
             <h3>En la SVCBMF estamos muy atentos a tus comentarios, preguntas y sugerencias.</h3>
@@ -13,44 +13,53 @@
 </div>
 
 
-<section class="cmspage mt-4 contact">
+<section class="cmspage mt-5 contact ">
     <div class="container barraseccion">
         <div class="page-desc" [hidden]="submitted">
-            <div class="row">
-                <div class="col-12 col-sm-6 col-md-8">
+            <div class="row justify-content-md-center">
+                <div class="col-12 col-sm-8 ">
                     <form (ngSubmit)="onSubmit()" #contactForm="ngForm">
-                         <div class="">
-                            <div class="form-group camp col-xs-12 col-sm-6">
-                            <input type="text" name="name" id="name" [(ngModel)]="model.name" class="form-control" placeholder=" Nombre y Apellido" required #name="ngModel">
-                            <div *ngIf="name.invalid && (name.dirty || name.touched)" class="error">
-                                <div *ngIf="name?.errors?.['required']">
-                                    First Name is required.
+                        <div class="row">
+                            <div class="form-group camp col-xs-12 col-sm-4">
+                                <input type="text" name="name" id="name" [(ngModel)]="model.name" class="form-control"
+                                    placeholder=" Nombre y Apellido" required #name="ngModel">
+                                <div *ngIf="name.invalid && (name.dirty || name.touched)" class="error">
+                                    <div *ngIf="name?.errors?.['required']">
+                                        First Name is required.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group camp col-xs-12 col-sm-4">
+                                <input type="text" name="phone" id="phone" [(ngModel)]="model.phone"
+                                    class="form-control" placeholder=" Telefono">
+                            </div>
+
+                            <div class="form-group camp col-12 col-sm-4">
+                                <input type="text" name="email" id="email" [(ngModel)]="model.email"
+                                    class="form-control" placeholder="E-Mail" required email #email="ngModel">
+                                <div *ngIf="email.invalid && (email.dirty || email.touched)" class="error">
+                                    <div *ngIf="email?.errors?.['required']"> {{ 'Email is required.' }}</div>
+                                    <div *ngIf="email?.errors?.['email']"> {{ 'Email must be a valid email address.' }}
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="form-group camp col-xs-12 col-sm-6">
-                            <input type="text" name="phone" id="phone" [(ngModel)]="model.phone" class="form-control" placeholder=" Telefono">
-                        </div>
-                         </div>
-                        <div class="form-group camp col-12">
-                            <input type="text" name="email" id="email" [(ngModel)]="model.email" class="form-control" placeholder="E-Mail" required email #email="ngModel">
-                            <div *ngIf="email.invalid && (email.dirty || email.touched)" class="error">
-                                <div *ngIf="email?.errors?.['required']"> {{ 'Email is required.' }}</div>
-                                <div *ngIf="email?.errors?.['email']"> {{ 'Email must be a valid email address.' }}</div>
-                            </div>
-                        </div>
-                        <div class="form-group camp2 col-12">
-                            <textarea name="message" id="message" [(ngModel)]="model.message" rows="5" class="form-control" placeholder="Comentario" required #message="ngModel"></textarea>
+                        <div class="row">
+                            <div class="form-group camp2 col-12">
+                            <textarea name="message" id="message" [(ngModel)]="model.message" rows="5"
+                                class="form-control" placeholder="Comentario" required #message="ngModel"></textarea>
                             <div *ngIf="message.invalid && (message.dirty || message.touched)" class="error">
                                 <div *ngIf="message?.errors?.['required']">{{ 'Message is required. ' }}</div>
                             </div>
                         </div>
-                        <div class="form-group col-12">
-                            <button [disabled]="!contactForm.form.valid" class="boton2 col-xs-12 col-md-4 col-md-offset-4"> Enviar</button>
+                        </div>
+                        <div class="row justify-content-md-center">
+                            <button [disabled]="!contactForm.form.valid"
+                                class="boton2 col-xs-12 col-md-4 col-md-offset-4"> Enviar</button>
                         </div>
                     </form>
                 </div>
-                <div class="Social col-12 col-md-4">
+                <!-- <div class="Social col-12 col-md-4">
 
                     <div id="direcc" *ngFor="let configuracion of configuracions">
                         <div class="info">
@@ -65,30 +74,25 @@
                         </div>
                         <div class="clear"></div>
                         <div class="info">
-                            <!-- <div class="icon_cont">
-                                <div class="icon">
-                                    <i class="fa fa-phone"></i>
-                                </div>
-                            </div> -->
+                           
                             <b class="font" style="font-size:18px;">Teléfono:</b><br>
-                            <!-- <div class="{{configuracion.telefonoActivo}}">
-                                <p><b>Teléfonos:</b></p>
-                                <a href="tel:{{configuracion.telefono}}" class="tel" target="_blank">{{configuracion.telefono}}</a>
-
-                            </div> -->
+                            
                             <div *ngIf="configuracion.telPresActivo === '1'">
                                 <p><b>Presidencia:</b></p>
-                                <a href="tel:{{configuracion.telPresidencia}}" class="tel" target="_blank">{{configuracion.telPresidencia}}</a>
+                                <a href="tel:{{configuracion.telPresidencia}}" class="tel"
+                                    target="_blank">{{configuracion.telPresidencia}}</a>
 
                             </div>
-                            <div  *ngIf="configuracion.telSecActivo === '1'">
+                            <div *ngIf="configuracion.telSecActivo === '1'">
                                 <p><b>Secretaría:</b></p>
-                                <a href="tel:{{configuracion.telSecretaria}}" class="tel" target="_blank">{{configuracion.telSecretaria}}</a>
+                                <a href="tel:{{configuracion.telSecretaria}}" class="tel"
+                                    target="_blank">{{configuracion.telSecretaria}}</a>
 
                             </div>
-                            <div  *ngIf="configuracion.telTesActivo === '1'" >
+                            <div *ngIf="configuracion.telTesActivo === '1'">
                                 <p><b>Tesorería:</b></p>
-                                <a href="tel:{{configuracion.telTesoreria}}" class="tel" target="_blank">{{configuracion.telTesoreria}}</a>
+                                <a href="tel:{{configuracion.telTesoreria}}" class="tel"
+                                    target="_blank">{{configuracion.telTesoreria}}</a>
 
                             </div>
                         </div>
@@ -103,7 +107,7 @@
                             <a href="mailto:svcbmf@gmail.com" target="_blank">svcbmf&#64;gmail.com</a>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
         <div class="service-error" *ngIf="error">
@@ -115,7 +119,7 @@
                 <h3 class="success"> {{ 'Gracias!' }}</h3>
                 <h4> {{ 'Su mensaje ha sido enviado' }}</h4>
                 <br />
-                <button (click)="gotoHome()" class="btn btn-info"> {{ 'Volver al Inicio'  }}</button>
+                <button (click)="gotoHome()" class="btn btn-info"> {{ 'Volver al Inicio' }}</button>
             </div>
         </div>
     </div>
