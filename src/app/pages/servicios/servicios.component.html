@@ -1,6 +1,6 @@
 <section class="topes" id="directorio">
     <div class="container">
-        <h1 class="up">Servicios de Cirugía en el Sistema Público de Salud.</h1>
+        <h1 class="up">{{title}}</h1>
     </div>
 </section>
 <div class="container">
@@ -14,14 +14,14 @@
 <app-loading *ngIf="isLoading" ></app-loading>
 <div class="container" *ngIf="!isLoading">
     <!--Including the pagination control.-->
-    <!-- <div class="row mt-4 mb-4">
-        <div class="text-center">
-            <pagination-controls (pageChange)="p = $event"  previousLabel="Anterior" nextLabel="Siguiente"></pagination-controls>
+    <div class="row mt-4 mb-4" >
+            <div class="text-center">
+                <pagination-controls (pageChange)="onPageChange($event)"  previousLabel="Anterior" nextLabel="Siguiente"></pagination-controls>
+            </div>
         </div>
-    </div> -->
     <p>Total: {{total}}</p>
     <div class="row">
-        <div class="col-12 col-sm-6 col-md-4 fr-view mb-5" *ngFor="let formacion of formacions | keys | paginate: { itemsPerPage: count, currentPage: p }">
+        <div class="col-12 col-sm-6 col-md-4 fr-view mb-5" *ngFor="let formacion of formacions | keys | paginate: { itemsPerPage: 10, currentPage: p }; let i=index">
             <div class="card">
                 <div class="card-body">
 
@@ -40,9 +40,9 @@
 
     </div>
     <!--Including the pagination control.-->
-    <div class="row mt-4 mb-4">
+    <!-- <div class="row mt-4 mb-4">
         <div class="text-center">
             <pagination-controls (pageChange)="p = $event"  previousLabel="Anterior" nextLabel="Siguiente"></pagination-controls>
         </div>
-    </div>
+    </div> -->
 </div>

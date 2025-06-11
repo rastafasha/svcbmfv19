@@ -8,19 +8,20 @@ import { CommonModule, NgFor, NgIf } from '@angular/common';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { KeysPipe } from '../../pipes/keys.pipe';
 import { LoadingComponent } from '../../shared/loading/loading.component';
+import { RouterModule, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-servicios',
   templateUrl: './servicios.component.html',
   imports: [
-    CommonModule, NgFor, KeysPipe, NgxPaginationModule,
-    NgIf, LoadingComponent
+    CommonModule, RouterModule, NgFor, NgxPaginationModule, 
+    KeysPipe, LoadingComponent, NgIf,
   ],
   styleUrls: ['./servicios.component.css']
 })
 export class ServiciosComponent implements OnInit {
 
-
+  title = 'Servicios de Cirugía en el Sistema Público de Salud';
   formacions!: Formacion[]|null;
   error!: {};
   isLoading: boolean = false;
@@ -34,7 +35,6 @@ export class ServiciosComponent implements OnInit {
 
 
   constructor(
-    private titleService: Title,
     private formacionService: FormacionService,
 
     handler: HttpBackend) {
@@ -54,5 +54,9 @@ export class ServiciosComponent implements OnInit {
 
     window.scrollTo(0,0);
   }
+
+  onPageChange(page: number) {
+  this.p = page;
+}
 
 }
