@@ -76,17 +76,17 @@
                                 <a href="tel:{{configuracion.telefono}}" class="tel" target="_blank">{{configuracion.telefono}}</a>
 
                             </div> -->
-                            <div class="{{configuracion.telPresActivo}}">
+                            <div *ngIf="configuracion.telPresActivo === '1'">
                                 <p><b>Presidencia:</b></p>
                                 <a href="tel:{{configuracion.telPresidencia}}" class="tel" target="_blank">{{configuracion.telPresidencia}}</a>
 
                             </div>
-                            <div class="{{configuracion.telSecActivo}}">
+                            <div  *ngIf="configuracion.telSecActivo === '1'">
                                 <p><b>Secretaría:</b></p>
                                 <a href="tel:{{configuracion.telSecretaria}}" class="tel" target="_blank">{{configuracion.telSecretaria}}</a>
 
                             </div>
-                            <div class="configuracion.telTesActivo">
+                            <div  *ngIf="configuracion.telTesActivo === '1'" >
                                 <p><b>Tesorería:</b></p>
                                 <a href="tel:{{configuracion.telTesoreria}}" class="tel" target="_blank">{{configuracion.telTesoreria}}</a>
 

@@ -34,7 +34,7 @@ export class ContactFormComponent implements OnInit {
   ngOnInit() {
     window.scrollTo(0,0);
     this.configuracionService.getConfiguracions().subscribe(
-      (data: Configuracion) => this.configuracions = [data],
+      (res: any) => this.configuracions = res.settings.data[0],
       error => this.error = error
     );
   }
