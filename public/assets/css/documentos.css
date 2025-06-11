@@ -101,13 +101,14 @@
 
 @media(max-width:768px){
       .caja {
-    width: 100%;
-    display: block;
-}
+        width: 100%;
+        display: block;
+    }
     
-     .caja h3{font-size: 16px;
-    
-}
+        .caja h3{
+            font-size: 16px;
+        
+    }
    
     
 

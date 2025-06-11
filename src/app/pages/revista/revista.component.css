@@ -22,8 +22,8 @@
     background-size: contain;
 }
 
-@media (max-width:768px) {
+@media(max-width:768px){
     .grupo{
-        flex-direction: column;
+        flex-direction: column !important;
     }
 }
