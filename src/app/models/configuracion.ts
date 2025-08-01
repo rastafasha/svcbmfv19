@@ -9,4 +9,5 @@ export class Configuracion {
     telSecActivo!: string;
     telTesoreria!: string;
     telTesActivo!: string;
+    email!: string;
 }
